@@ -33,7 +33,8 @@ const navLinks = [
   { label: "Services", path: "/services" },
   { label: "Case Study", path: "/case-study" },
   { label: "Contact", path: "/contact" },
-  { label: "Carr", path: "/career" },
+  { label: "Career", path: "/career" },
+  { label: "Portfolio", path: "/portfolio" },
 ];
 
 export default function Navbar() {
