@@ -7,7 +7,7 @@ import ctabggif from "../assets/ctabg-gif.gif";
 import portfoliogif from "../assets/portfolio-gif.gif";
 import brownmonster from "../assets/brownmaster.png";
 import arouzed from "../assets/arouzed.png";
-import uniqlearn from "../assets/uniqlearn.png";
+import uniqlearn from "../assets/uniqlearn-portfolio.png";
 import mortage from "../assets/mortage.png";
 import salviali from "../assets/salviali.png";
 import anypost from "../assets/anypost.png";
