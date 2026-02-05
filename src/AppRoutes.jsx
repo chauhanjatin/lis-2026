@@ -6,6 +6,7 @@ import Cashstudy from "./pages/Cashstudy";
 import Contactus from "./pages/Contactus";
 import Career from "./pages/Career";
 import Portfolio from "./pages/Portfolio";
+import Projectdetail from "./pages/Projectdetail";
 
 export default function AppRoutes() {
   return (
@@ -17,6 +18,7 @@ export default function AppRoutes() {
       <Route path="/contact" element={<Contactus />} />
       <Route path="/career" element={<Career />} />
       <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/project/uniqlearn" element={<Projectdetail />} />
     </Routes>
   );
 }

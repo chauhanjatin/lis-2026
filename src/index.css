@@ -86,3 +86,63 @@
 .link-items:hover img {
   opacity: 0;
 }
+
+.img-marquee {
+  position: relative;
+  margin-top: 80px;
+  overflow-x: hidden;
+}
+
+.img-marquee:before,
+.img-marquee:after {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 140px;
+  height: 100%;
+  z-index: 2;
+}
+
+.img-marquee:before {
+  left: 0;
+  background: linear-gradient(to left,
+      rgba(255, 255, 255, 0),
+      rgb(255, 255, 255));
+}
+
+.img-marquee:after {
+  right: 0;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0),
+      rgb(255, 255, 255));
+}
+
+.logos {
+  grid-column-gap: 30px;
+  opacity: 1;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  display: grid;
+  width: 300rem;
+  animation: slide 35s infinite linear;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(calc(0% + 50px));
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.logo_items img {
+  max-width: inherit;
+}
+
+.logos:hover {
+  animation-play-state: paused;
+}

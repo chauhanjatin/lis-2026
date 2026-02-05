@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 import casestudygif from "../assets/cashstudy-gif.gif";
 import casestudyimg1 from "../assets/casestudy-img1.png";
 import casestudyimg2 from "../assets/casestudy-img2.png";
@@ -7,6 +8,7 @@ import casestudyimg3 from "../assets/casestudy-img3.png";
 import contactbtnarrow from "../assets/contactbtn-arrow.svg";
 import ctagif from "../assets/cta-gif.gif";
 import ctabggif from "../assets/ctabg-gif.gif";
+import viewgif from "../assets/card-viewgif.gif";
 import Footer from "./Footer";
 
 function Cashstudy() {
@@ -18,7 +20,7 @@ function Cashstudy() {
       <section className="relative bg-white overflow-hidden pt-20 pb-32">
         <div className="container mx-auto">
           <div className="items-center">
-            <div className="relative ">
+            <div className="relative">
               <h3 className="text-[20px] mb-3 font-light text-[#181818]">
                 CASH STUDIES
               </h3>
@@ -53,22 +55,109 @@ function Cashstudy() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gray-300 opacity-10 rounded-full blur-3xl"></div>
       </section>
 
-      {/*  */}
+      {/* Cards */}
       <div className="container mx-auto">
         <div className="flex gap-[40px] mt-10">
-          <div>
-            <img src={casestudyimg1} alt="" />
+          {/* Card 1 */}
+          <div className="relative group rounded-2xl overflow-hidden">
+            <img
+              src={casestudyimg1}
+              alt=""
+              className="w-full h-full object-cover"
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300">
+              {/* Content */}
+              <div className="absolute bottom-0 left-0 w-full p-8">
+                <h3 className="text-white text-[50px] font-semibold leading-none">
+                  BrownMonster
+                </h3>
+
+                {/* Divider */}
+                <div className="my-[20px] w-[220px] border-t-8 border-[#FFFFFF]" />
+
+                <p className="text-white text-[24px]">SaaS</p>
+              </div>
+
+              {/* View button */}
+              <Link to="/project/uniqlearn">
+                <div className="absolute bottom-6 right-6 flex items-center justify-center cursor-pointer">
+                  <img
+                    src={viewgif}
+                    alt="view"
+                    className="w-[172px] h-[172px]"
+                  />
+                  <span className="absolute text-black text-[30px] font-medium">
+                    View
+                  </span>
+                </div>
+              </Link>
+            </div>
           </div>
 
-          <div>
-            <img src={casestudyimg2} alt="" />
+          {/* Card 2 */}
+          <div className="relative group rounded-2xl overflow-hidden">
+            <img
+              src={casestudyimg2}
+              alt=""
+              className="w-full h-full object-cover"
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300">
+              {/* Content */}
+              <div className="absolute bottom-0 left-0 w-full p-8">
+                <h3 className="text-white text-[50px] font-semibold leading-none">
+                  BrownMonster
+                </h3>
+
+                {/* Divider */}
+                <div className="my-[20px] w-[220px] border-t-8 border-[#FFFFFF]" />
+
+                <p className="text-white text-[24px]">SaaS</p>
+              </div>
+
+              {/* View button */}
+              <div className="absolute bottom-6 right-6 flex items-center justify-center">
+                <img src={viewgif} alt="view" className="w-[172px] h-[172px]" />
+                <span className="absolute text-black text-[30px] font-medium">
+                  View
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="mt-[40px]">
-          <img src={casestudyimg3} alt="" />
+        {/* Full width image */}
+        <div className="mt-[40px] relative group rounded-2xl overflow-hidden">
+          <img src={casestudyimg3} alt="" className="w-full object-cover" />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300">
+            {/* Content */}
+            <div className="absolute bottom-0 left-0 w-full p-8">
+              <h3 className="text-white text-[50px] font-semibold leading-none">
+                BrownMonster
+              </h3>
+
+              {/* Divider */}
+              <div className="my-[20px] w-[220px] border-t-8 border-[#FFFFFF]" />
+
+              <p className="text-white text-[24px]">SaaS</p>
+            </div>
+
+            {/* View button */}
+            <div className="absolute bottom-6 right-6 flex items-center justify-center">
+              <img src={viewgif} alt="view" className="w-[172px] h-[172px]" />
+              <span className="absolute text-black text-[30px] font-medium">
+                View
+              </span>
+            </div>
+          </div>
         </div>
       </div>
+      
 
       {/* CTA */}
       <section className="my-[130px]">
@@ -98,7 +187,7 @@ function Cashstudy() {
       </section>
 
       {/* Footer */}
-      <Footer/>
+      <Footer />
     </div>
   );
 }
