@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import heroImg from "../assets/portfolio-detailimg.png";
 import figmalink from "../assets/figma-link.png";
 import visitlinkicon from "../assets/visit-linkicon.svg";
-import uniqulearn from "../assets/uniqlearn/uniqlearn-heroimg.png";
+import uniqlearn from "../assets/uniqlearn/uniqlearn-heroimg.png";
 import starimg from "../assets/star-listimg.svg";
 import contactbtnarrow from "../assets/contactbtn-arrow.svg";
 import ctagif from "../assets/cta-gif.gif";
@@ -113,7 +113,7 @@ function Projectdetail() {
       {/* Description Section */}
       <section className="container mx-auto">
         <div className="mt-[120px] mb-[92px]">
-          <img src={uniqulearn} alt="" />
+          <img src={uniqlearn} alt="" />
         </div>
         <div className="mb-[80px]">
           <p className="text-[40px] font-semibold">Our Challenge</p>
