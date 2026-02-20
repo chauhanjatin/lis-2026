@@ -26,9 +26,9 @@ function Contactus() {
                 Your <br /> Projects
               </h1>
               <p className="text-[24px] text-[#181818] my-[30px] leading-[36px] font-normal">
-                Have an idea in mind? Let’s bring it to life. Whether you need 
+                Have an idea in mind? Let’s bring it to life. Whether you need
                 <b>
-                   UI/UX design, website <br /> development, mobile apps, or
+                  UI/UX design, website <br /> development, mobile apps, or
                   complete end-to-end digital product solutions,
                 </b>{" "}
                 our team is <br /> here to help. Share your project details
@@ -38,11 +38,19 @@ function Contactus() {
             </div>
           </div>
 
-          <div className="absolute right-[6%] bottom-[22%]">
+          <div
+            className="relative 
+    sm:relative md:absolute 
+    right-0 md:right-[6%] 
+    mt-10 md:mt-0 
+    bottom-0 md:bottom-[22%] 
+    flex justify-center md:block"
+          >
             <img
               src={contactusgif}
               alt="Hero section animation"
-              className="w-full h-auto max-w-lg object-contain"
+              className="w-[200px] sm:w-[250px] md:w-[300px] 
+        lg:w-[435px] h-auto object-contain"
             />
           </div>
         </div>
@@ -79,7 +87,7 @@ function Contactus() {
               </div>
             </div>
 
-            <form className="space-y-10 mb-5">
+            <form className="space-y-10 mb-[120px]">
               {/* Name */}
               <input
                 type="text"
@@ -110,29 +118,18 @@ function Contactus() {
               />
 
               {/* Button */}
-              {/* <button
-                type="submit"
-                className="inline-flex items-center justify-center px-8 py-3 rounded-full border border-blue-500 text-blue-600 font-medium hover:bg-blue-500 hover:text-white transition-all"
-              >
-                Send Request
-              </button> */}
 
-              <button
-                className="px-8 py-3 rounded-full bg-white text-[#0b4dbb] font-semibold
-  border-2
-  border-l-[#0b4dbb]
-  border-t-[#0b4dbb]
-  border-b-[#19b7c6]
-  border-r-[#19b7c6]"
-              >
-                Send Request
-              </button>
+              <a className="thames_btns m-0" href="#">
+                <p>
+                  <span>Send Request</span>
+                </p>
+              </a>
             </form>
           </div>
         </div>
       </section>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }

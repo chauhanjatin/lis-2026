@@ -38,13 +38,12 @@ const contactInfo = [
 
 export default function Footer() {
   return (
-    <footer className="relative flex flex-col w-full items-center  gap-10 pt-20 pb-[50px] px-[200px] bg-[#181818]">
+    <footer className="relative flex flex-col w-full items-center gap-10 pt-20 pb-[50px] px-[200px] bg-[#181818]">
       <div className="flex items-start justify-between w-full">
         <div className="inline-flex flex-col items-start gap-10">
           <div className="relative w-[180px] h-[60px]">
             <img className=" " alt="Group" src={logo} />
           </div>
-
           <p className="w-[458px] [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-white text-lg tracking-[0] leading-6">
             LIS is a leading global software development company offering custom
             web development, mobile app development, UI/UX design, and digital
@@ -58,7 +57,6 @@ export default function Footer() {
             <h3 className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-white text-lg tracking-[0] leading-[normal]">
               Company
             </h3>
-
             <ul className="inline-flex flex-col items-start gap-5">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -77,7 +75,6 @@ export default function Footer() {
             <h3 className="[font-family:'Segoe_UI-Semibold', Helvetica] font-normal text-white text-lg tracking-[0] leading-[normal]">
               Help{" "}
             </h3>
-
             <ul className="inline-flex flex-col items-start gap-5">
               {helpLinks.map((link, index) => (
                 <li key={index}>
@@ -100,12 +97,10 @@ export default function Footer() {
                   alt={info.title}
                   src={info.icon}
                 />
-
                 <div className={index === 2 ? "w-[317px]" : ""}>
                   <div className="[font-family:'Segoe_UI-Semibold',Helvetica] font-normal text-[#ffffff] text-base tracking-[0] leading-[normal]">
                     {info.title}
                   </div>
-
                   <div className="mt-[13px] [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[#ffffffb2] text-sm tracking-[0] leading-[normal]">
                     {info.content}
                   </div>
@@ -117,7 +112,6 @@ export default function Footer() {
       </div>
 
       <hr className="w-full h-px bg-[#464646] border-0" />
-
       <p className="[font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[#ffffff99] text-sm tracking-[0] leading-[normal]">
         Copyright © 2026. All Rights Reserved by LIS.
       </p>

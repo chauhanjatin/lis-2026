@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroGif from "../assets/herosec-gif.gif";
@@ -14,7 +14,10 @@ import relaiablesupport from "../assets/relaiablesupport.svg";
 import contactbtnarrow from "../assets/contactbtn-arrow.svg";
 import ctagif from "../assets/cta-gif.gif";
 import ctabggif from "../assets/ctabg-gif.gif";
+import discover from "../assets/discover.png";
+import build from "../assets/build.png";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const features = [
   {
@@ -118,6 +121,28 @@ const toolsData = [
 export default function Home() {
   const { slug } = useParams();
   const project = data.find((item) => item.slug === slug) || data[0];
+
+  const sectionRef = useRef(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!sectionRef.current) return;
+
+      const rect = sectionRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top <= windowHeight && rect.bottom >= 0) {
+        const progress = 1 - rect.top / windowHeight;
+
+        const newScale = 1 + progress * 1;
+        setScale(Math.min(newScale, 2));
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div>
@@ -264,7 +289,8 @@ export default function Home() {
               <div className="relative text-center">
                 <h3 className="text-[56px] font-bold text-black">27+</h3>
                 <p className="mt-4 text-[18px] text-black leading-relaxed">
-                  Happy <br />Clients
+                  Happy <br />
+                  Clients
                 </p>
 
                 <span className="absolute -top-12 right-0 flex items-center gap-2 bg-[#F9C5C5] text-black text-sm px-3 py-1 rounded">
@@ -279,7 +305,7 @@ export default function Home() {
                   Expert Developers <br /> & Designers
                 </p>
               </div>
-            </div>   
+            </div>
           </div>
         </section>
 
@@ -383,22 +409,89 @@ export default function Home() {
         </div>
 
         {/* Our process */}
-        <div className="container mx-auto my-[150px]">
-          <div className="flex text-center justify-center">
-            <p className="px-[300px] py-[150px] bg-[#181818] text-white text-[90px] font-bold leading-[100px]">
-              Our <br /> Process
-            </p>
+        <section ref={sectionRef} className="w-full h-[200vh]">
+          <div className="sticky top-0 flex items-center justify-center h-screen">
+            <div className="flex justify-center">
+              <p
+                style={{ transform: `scale(${scale})` }}
+                className="w-full px-[300px] py-[150px] bg-[#181818] text-white text-[90px] font-bold leading-[100px] text-center"
+              >
+                Our <br /> Process
+              </p>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div className="bg-[#181818]">
-          <div className="container mx-auto">
-            <div className="w-full flex py-[100px]">
-              <h1 className="[font-family:'Segoe_UI-Bold',Helvetica] font-bold text-[#ffffff] text-[220px] tracking-[4.40px] leading-[normal]">
-                Services
-                <br />
-                We Provide
-              </h1>
+        {/* Service we provide */}
+        <div className="bg-[#181818] text-white">
+          <div className="px-[40px]">
+            <div className="py-[100px] space-y-[120px]">
+              {/* 1 - Discover */}
+              <div className="border-t border-white/10 pt-[80px] flex items-start justify-between">
+                <div className="flex items-start gap-[100px]">
+                  <span className="text-[40px]">[ 1 ]</span>
+                  <h2 className="text-[158px] font-semibold leading-none">
+                    Discover
+                  </h2>
+                </div>
+
+                <p className="max-w-[591px] text-[22px]">
+                  We analyze your business challenges, goals, and audience to
+                  define the best technological approach.
+                </p>
+                <div>
+                  <img src={discover} alt="" />
+                </div>
+              </div>
+
+              {/* 2 - Design */}
+              <div className="border-t border-white/10 pt-[80px] flex items-start justify-between">
+                <div className="flex items-start gap-10 ml-[200px]">
+                  <span className="text-[40px]">[ 2 ]</span>
+                  <h2 className="text-[120px] font-semibold leading-none">
+                    Design
+                  </h2>
+                </div>
+
+                <p className="max-w-[420px] text-white/70 text-lg">
+                  Our UI/UX team creates modern, intuitive, and user-centric
+                  designs that elevate user experience across devices.
+                </p>
+              </div>
+
+              {/* 3 - Build */}
+              <div className="border-t border-white/10 pt-[80px] grid grid-cols-3 items-center">
+                <div className="flex items-start gap-10">
+                  <span className="text-[40px] text-white/60">[ 3 ]</span>
+                  <h2 className="text-[120px] font-semibold leading-none">
+                    Build
+                  </h2>
+                </div>
+
+                <p className="max-w-[559px] text-lg">
+                  We develop secure, scalable, and future-ready digital products
+                  using clean code and industry best practices.
+                </p>
+
+                <div className="">
+                  <img src={build} alt="" />
+                </div>
+              </div>
+
+              {/* 4 - Deliver */}
+              <div className="border-t border-b border-white/10 pt-[80px] pb-[80px] flex items-start justify-between">
+                <p className="max-w-[420px] text-white/70 text-lg">
+                  Your product is thoroughly tested and deployed with complete
+                  support for maintenance and future updates.
+                </p>
+
+                <div className="flex items-start gap-10">
+                  <h2 className="text-[120px] font-semibold leading-none">
+                    Deliver
+                  </h2>
+                  <span className="text-[40px] mt-8">[ 4 ]</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -662,6 +755,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </div>
   );

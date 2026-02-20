@@ -33,6 +33,8 @@ const navigationButtons = [
   },
 ];
 
+
+
 function Projectdetail() {
   return (
     <div>

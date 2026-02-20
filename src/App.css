@@ -88,4 +88,52 @@ html {
   animation-play-state: paused;
 }
 
+.thames_btns {
+  background-image: linear-gradient(90.31deg, #082c6f 0.13%, #1db1be 99.61%);
+  border-radius: 4.5rem;
+  margin: 0 auto;
+  padding: 2px 2px 4px 2px;
+  border: 0;
+  background-color: transparent;
+  position: relative;
+  display: inline-flex;
+}
 
+.thames_btns:hover {
+  color: white;
+}
+
+.thames_btns p {
+  align-items: center;
+  background-color: white;
+  border-radius: 4.5rem;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  transition: background 0.5s ease;
+  font-weight: 700;
+}
+
+.thames_btns:hover p {
+  background: transparent;
+  color: white;
+}
+
+.thames_btns span {
+  padding: 16px 35px;
+  background: linear-gradient(90.31deg, #082c6f 0.13%, #1db1be 99.61%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.thames_btns span:hover {
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.thames_btns:hover span {
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

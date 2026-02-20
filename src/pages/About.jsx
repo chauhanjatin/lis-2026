@@ -21,6 +21,7 @@ import commitment from "../assets/commitment.svg";
 import clarity from "../assets/clarity.svg";
 import excellence from "../assets/excellence.svg";
 import passion from "../assets/passion.svg";
+import Footer from "./Footer";
 
 const features = [
   {
@@ -286,6 +287,8 @@ function About() {
           </div>
         </section>
       </div>
+
+      <Footer/>
     </div>
   );
 }

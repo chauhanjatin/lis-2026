@@ -46,7 +46,7 @@ function Cashstudy() {
             <img
               src={casestudygif}
               alt="Hero section animation"
-              className="w-full h-auto max-w-lg object-contain opacity-40"
+              className="w-full h-auto max-w-lg object-contain grayscale"
             />
           </div>
         </div>
