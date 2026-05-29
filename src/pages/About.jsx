@@ -220,7 +220,7 @@ function About() {
                   Mobile development
                   <span className="w-2 h-2 bg-[#F28C8C] rotate-45 inline-block"></span>
                 </span>
-              </div>  
+              </div>
 
               {/* 4 */}
               <div className="text-center md:text-right">
@@ -269,7 +269,7 @@ function About() {
             </h1>
           </div>
 
-          {/* DIVIDER */} 
+          {/* DIVIDER */}
           <div className="border-t border-[#2a2a2a]" />
 
           {/* CARDS */}
@@ -352,10 +352,10 @@ function About() {
           <div className="containerX mx-auto">
             <div
               className="flex lg:flex-row items-center justify-between 
-                  gap-8 p-[40px] md:p-[55px] lg:[76px] xl:p-[85px]
-                  2xl:p-[100px] 
-                  bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] 
-                  rounded-[30px] md:rounded-[40px] relative overflow-hidden"
+                     gap-8 p-[40px] md:p-[55px] lg:[76px] xl:p-[85px]
+                     2xl:p-[100px] 
+                     bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] 
+                     rounded-[30px] md:rounded-[40px] relative overflow-hidden"
             >
               {/* Background Pattern */}
               <img
@@ -381,25 +381,22 @@ function About() {
               {/* Button */}
               <button
                 className="relative z-10 flex items-center gap-3 
-      bg-[#ffffff21] border border-white 
-      shadow-[0px_4px_20px_#0000000d] 
-      px-[26px] py-[16px] md:px-[28px] md:py-[16px] lg:px-[30px] lg:py-[20px] 
-      rounded-[100px] hover:bg-[#ffffff31] transition"
-              >
-                <span className="text-[#0b0c10] font-normal text-[14px] lg:text-[16px] xl:text-[18px] whitespace-nowrap">
-                  Start a Conversation
-                </span>
-
+                          bg-[#ffffff21] border border-white 
+                          shadow-[0px_4px_20px_#0000000d] 
+                          px-[26px] py-[16px] md:px-[28px] md:py-[16px] lg:px-[30px] lg:py-[20px] 
+                          rounded-[100px] hover:bg-[#ffffff31] transition">
+                     <span className="text-[#0b0c10] font-normal text-[14px] lg:text-[16px] xl:text-[18px] whitespace-nowrap">
+                       Start a Conversation
+                     </span>
                 <img src={contactbtnarrow} alt="" className="w-4 md:w-5" />
               </button>
 
               {/* Decorative GIF */}
-              <div className="absolute md:right-[9%] md:bottom-[-16%] lg:right-[7%] lg:bottom-[-20%] xl:right-[8%] xl:bottom-[-8%] 2xl:bottom-[4%] 2xl:right-[7%] z-10 hidden md:block">
+              <div className="absolute md:right-[9%] md:bottom-[-16%] lg:right-[7%] lg:bottom-[-20%] xl:right-[8%] xl:bottom-[-8%] 2xl:bottom-[4%]  2xl:right-[7%] z-10 hidden md:block">
                 <img
                   src={ctagif}
                   alt=""
-                  className="w-[120px] md:w-[160px] lg:w-[175px] xl:w-[209px]"
-                />
+                  className="w-[120px] md:w-[160px] lg:w-[175px] xl:w-[209px]"/>
               </div>
             </div>
           </div>
@@ -429,8 +426,8 @@ function About() {
                 <div
                   key={index}
                   className={`p-6 lg:p-8 xl:p-10 border-gray-200
-          ${index % 2 === 0 ? "sm:border-r" : ""}
-          ${index < 4 ? "border-b" : ""}`}
+                          ${index % 2 === 0 ? "sm:border-r" : ""}
+                          ${index < 4 ? "border-b" : ""}`}
                 >
                   <img
                     src={item.icon}
@@ -452,33 +449,28 @@ function About() {
                 </div>
               ))}
             </div>
+
           </div>
         </section>
 
         {/* Feedbacks */}
         <section
-          id="testimonials"
-          className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative"
-        >
+          id="testimonials" className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative">
           <img
             className="absolute inset-0 h-full w-full object-cover opacity-10"
             alt="Background pattern"
             src={ctabggif}
           />
-
           <div className="mx-auto">
             {/* Heading */}
             <h2 className="text-[36px] sm:text-[50px] md:text-[50px] lg:text-[60px] font-bold text-[#1C1C1C] mb-12 md:mb-16 lg:mb-20 text-center leading-[120%]">
               Feedback from Our <br /> Customers
             </h2>
-
             {/* Slider Wrapper */}
             <div className="relative">
               {/* Cards Row */}
               <div
-                ref={sliderRef}
-                className="flex gap-5 md:gap-8 overflow-x-auto scroll-smooth no-scrollbar"
-              >
+                ref={sliderRef} className="flex gap-5 md:gap-8 overflow-x-auto scroll-smooth no-scrollbar">
                 {[1, 2, 3, 4, 5, 6].map((item, index) => (
                   <div
                     key={index}
@@ -492,40 +484,33 @@ function About() {
                           alt="Profile"
                           className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full object-cover"
                         />
-
                         <div>
                           <h4 className="font-normal text-[16px] md:text-[18px] text-[#1C1C1C]">
                             Harry Maguire
                           </h4>
-
                           <p className="text-[#18181866] text-[14px] md:text-[16px]">
                             CEO, company
                           </p>
                         </div>
                       </div>
-
                       <img
                         src={feedbackstars}
                         alt="rating"
                         className="w-[80px] md:w-[100px] lg:w-[110px]"
                       />
                     </div>
-
                     {/* Title */}
                     <h3 className="text-center font-semibold text-[16px] md:text-[18px] mt-6 md:mt-8 text-[#1C1C1C]">
                       Top-Notch Quality
                     </h3>
-
                     {/* Description */}
                     <p className="text-center text-[#18181866] text-[14px] md:text-[16px] lg:text-[18px] mt-3 md:mt-4 leading-relaxed">
                       UI Wiki transformed our design process! The templates are
                       modern, user-friendly, and saved us countless hours
                     </p>
-
                     {/* Bottom */}
                     <div className="flex justify-between items-center mt-6 md:mt-8 lg:mt-10">
                       <img src={feedbackicon} alt="logo" />
-
                       <p className="text-[14px] md:text-[16px] text-[#181818] font-semibold">
                         21.05.2024
                       </p>
@@ -542,7 +527,6 @@ function About() {
                 >
                   ←
                 </button>
-
                 <button
                   onClick={scrollRight}
                   className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-200 transition duration-300"
@@ -550,10 +534,10 @@ function About() {
                   →
                 </button>
               </div>
-
             </div>
           </div>
         </section>
+
       </div>
 
       <Footer />

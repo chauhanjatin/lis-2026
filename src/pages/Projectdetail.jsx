@@ -38,7 +38,7 @@ function Projectdetail() {
   return (
     <div>
       <Navbar />
- 
+
       {/* Hero Section */}
       <section className="containerX mx-auto mt-[90px] mb-[200px]">
         <div className="relative">
@@ -52,6 +52,7 @@ function Projectdetail() {
               {navigationButtons.map((button) => {
                 const isOutline = button.variant === "outline";
                 const isImageIcon = button.iconType === "image";
+
                 if (isOutline) {
                   return (
                     <button
@@ -71,17 +72,17 @@ function Projectdetail() {
                     </button>
                   );
                 }
+
                 return (
                   <button
                     key={button.label}
-                    className="w-[151px] flex items-center gap-2 px-[10px] py-[14px] rounded-full bg-gradient-to-b from-[#254A8C] to-[#1DB0BE] shadow-[0px_0px_20px_#0000001a]">
+                    className="w-[151px] flex items-center gap-2 px-[10px] py-[14px]      rounded-full bg-gradient-to-b from-[#254A8C] to-[#1DB0BE] shadow-[0px_0px_20px_#0000001a]">
                     <span className="text-white text-lg">{button.label}</span>
                     <img src={button.icon} alt={button.label} className="" />
                   </button>
                 );
               })}
             </div>
-
           </div>
 
           {/* Right Image */}
@@ -210,7 +211,6 @@ function Projectdetail() {
             </div>
 
             <div className="space-y-6">
-             
               <div className="flex gap-4">
                 <img src={starimg} alt="" className="mt-1" />
                 <p className="text-[20px] font-bold text-[#111]">
@@ -251,7 +251,6 @@ function Projectdetail() {
         <p className="text-[40px] mb-[30px]">Service</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
           {/* Column 1 */}
-          
           <div>
             <h3 className="text-[24px] font-medium mb-6">
               Branding & Identity
@@ -270,6 +269,7 @@ function Projectdetail() {
           </div>
 
           {/* Column 2 */}
+          
           <div>
             <h3 className="text-[24px] font-medium mb-6">
               Digital Product Design
@@ -300,7 +300,6 @@ function Projectdetail() {
               </div>
             </div>
           </div>
-
         </div>
       </section>  
 
@@ -320,14 +319,12 @@ function Projectdetail() {
               <span className="text-white font-semibold italic">vision </span>
               — we’ll build <br /> the product.
             </p>
-            
             <button className="relative  flex gap-2.5 bg-[#ffffff21] border border-solid border-[#ffffff] shadow-[0px_4px_20px_#0000000d] px-[40px] py-[26px] rounded-[100px] hover:bg-[#ffffff31]">
               <span className="text-[#0b0c10] [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[18px] text-center tracking-[0] leading-6 whitespace-nowrap">
                 Work WIth LIS
               </span>
               <img src={contactbtnarrow} alt="" />
             </button>
-
             <div className="absolute right-[6%] bottom-[4%] z-10">
               <img src={ctagif} alt="" className="w-[209px] h-[209px]" />
             </div>

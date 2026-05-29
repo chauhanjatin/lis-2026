@@ -476,8 +476,7 @@ export default function Home() {
       <div className="w-full">
         <section
           id="home"
-          className="relative bg-white overflow-hidden pt-16 md:pt-20 pb-20 md:pb-32 lg:pb-24"
-        >
+          className="relative bg-white overflow-hidden pt-16 md:pt-20 pb-20 md:pb-32 lg:pb-24">
           <div className="containerX mx-auto">
             <div className="items-center">
               <div className="relative">
@@ -530,6 +529,7 @@ export default function Home() {
                 className="w-full h-auto max-w-lg object-contain"
               />
             </div>
+
           </div>
 
           {/* MARQUEE */}
@@ -559,7 +559,6 @@ export default function Home() {
         <section className="bg-white py-12 md:py-16 lg:py-20">
           <div className="containerX mx-auto">
             {/* HEADING */}
-            
             <h2 className="text-[28px] sm:text-[36px] md:text-[50px] lg:text-[65px] font-semibold text-[#181818] mb-[30px] md:mb-[40px] lg:mb-[50px] leading-[40px] sm:leading-[50px] md:leading-[65px] lg:leading-[80px]">
               <div className="inline-flex relative top-6">
                 <img
@@ -623,7 +622,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
           </div>
         </section>
 
@@ -668,6 +666,7 @@ export default function Home() {
                     className="absolute right-[60px] top-[-40px]"
                   />
                 </div>
+
               </div>
 
               {/* 27+ */}
@@ -954,6 +953,7 @@ export default function Home() {
                   className="w-[220px] sm:w-[280px] md:w-[320px] lg:w-[400px]"
                 />
               </div>
+
             </div>
 
             {/* RIGHT SIDE */}
@@ -973,7 +973,7 @@ export default function Home() {
 
                   <h4
                     className={`font-semibold text-[20px] md:text-[22px] lg:text-[24px] mb-2 text-[#181818]
-        group-hover:text-[#254A8C]`}
+                  group-hover:text-[#254A8C]`}
                   >
                     {item.title}
                   </h4>
@@ -1119,10 +1119,7 @@ export default function Home() {
         </section>
 
         {/* Feedbacks */}
-        <section
-          id="testimonials"
-          className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative"
-        >
+        <section id="testimonials"  className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative">
           <img
             className="absolute inset-0 h-full w-full object-cover opacity-[4%]"
             alt="Background pattern"
