@@ -48,7 +48,7 @@ function Cashstudy() {
               alt="Hero section animation"
               className="h-auto 2xl:w-[32rem] xl:w-[26rem] lg:w-[24rem] md:w-[20rem] object-contain grayscale"
             />
-          </div>
+          </div>       
         </div>
 
         <div className="absolute top-0 left-0 w-64 h-64 bg-gray-300 opacity-10 rounded-full blur-3xl"></div>
@@ -196,6 +196,7 @@ function Cashstudy() {
       {/* Footer */}
       <Footer />
     </div>
+    
   );
 }
 

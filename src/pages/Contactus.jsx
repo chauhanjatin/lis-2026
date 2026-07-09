@@ -39,17 +39,17 @@ function Contactus() {
 
           <div
             className="relative 
-    sm:relative md:absolute 
-    right-[5%] xl:right-[4%] 2xl:right-[6%] 
-    mt-10 md:mt-0 
-    bottom-[40%] xl:bottom-[40%] 2xl:bottom-[25%] 
-    flex justify-center md:block xl:"
+                   sm:relative md:absolute 
+                   right-[5%] xl:right-[4%] 2xl:right-[6%] 
+                   mt-10 md:mt-0 
+                   bottom-[40%] xl:bottom-[40%] 2xl:bottom-[25%] 
+                   flex justify-center md:block xl:"
           >
             <img
               src={contactusgif}
               alt="Hero section animation"
               className="w-[200px] md:w-[250px] lg:w-[275px] xl:w-[350px] 
-        2xl:w-[435px] h-auto object-contain"
+            2xl:w-[435px] h-auto object-contain"
             />
           </div>
         </div>
@@ -63,6 +63,7 @@ function Contactus() {
         <div className="">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-20 items-start">
             <div className="flex gap-[70px] xl:gap-[80px]">
+              
               {/* Email */}
               <div className="flex flex-col items-start">
                 <div className="py-[26px] px-[21px] xl:py-[30px] xl:px-[25px] 2xl:py-[32px] 2xl:px-[27px] rounded-full border border-[#D1D1D1] flex items-center justify-center mb-5">
@@ -92,7 +93,7 @@ function Contactus() {
                   Pal Gam, Surat, <br /> Gujarat, India.
                 </p>
               </div>
-            </div>
+            </div>  
 
             <form className="space-y-8 xl:space-y-9 2xl:space-y-10 mb-[120px]">
               {/* Name */}
@@ -132,6 +133,7 @@ function Contactus() {
                 </p>
               </a>
             </form>
+
           </div>
         </div>
       </section>

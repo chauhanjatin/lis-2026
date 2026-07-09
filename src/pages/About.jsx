@@ -398,6 +398,7 @@ function About() {
                   alt=""
                   className="w-[120px] md:w-[160px] lg:w-[175px] xl:w-[209px]"/>
               </div>
+
             </div>
           </div>
         </section>
@@ -449,7 +450,6 @@ function About() {
                 </div>
               ))}
             </div>
-
           </div>
         </section>
 
@@ -534,6 +534,7 @@ function About() {
                   →
                 </button>
               </div>
+
             </div>
           </div>
         </section>

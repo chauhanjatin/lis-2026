@@ -166,9 +166,8 @@ function Projectdetail() {
                 <p className="text-[20px] font-bold text-[#111]">
                   Need for an intuitive dashboard with clear navigation
                 </p>
-              </div>
-              
-            </div>
+              </div>              
+            </div>            
           </div>
 
           {/* Divider */}
@@ -269,7 +268,6 @@ function Projectdetail() {
           </div>
 
           {/* Column 2 */}
-          
           <div>
             <h3 className="text-[24px] font-medium mb-6">
               Digital Product Design
@@ -300,6 +298,7 @@ function Projectdetail() {
               </div>
             </div>
           </div>
+
         </div>
       </section>  
 

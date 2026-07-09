@@ -953,7 +953,6 @@ export default function Home() {
                   className="w-[220px] sm:w-[280px] md:w-[320px] lg:w-[400px]"
                 />
               </div>
-
             </div>
 
             {/* RIGHT SIDE */}
@@ -1031,6 +1030,7 @@ export default function Home() {
             </h2>
 
             <div className="tools_marquee">
+
               {/* Row 1 */}
               <div className="overflow-hidden w-full mb-6 md:mb-8">
                 <div className="marquee gap-5 md:gap-8 lg:gap-10">
@@ -1147,7 +1147,6 @@ export default function Home() {
                           src={profileimg}
                           alt="Profile"
                           className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full object-cover"/>
-
                         <div>
                           <h4 className="font-normal text-[16px] md:text-[18px] text-[#1C1C1C]">
                             Harry Maguire
@@ -1156,9 +1155,7 @@ export default function Home() {
                           <p className="text-[#18181866] text-[14px] md:text-[16px]">CEO, company</p>
                         </div>
                       </div>
-
                       <img src={feedbackstars} alt="rating" className="w-[80px] md:w-[100px] lg:w-[110px]"/>
-
                     </div>
 
                     {/* Title */}
@@ -1199,8 +1196,10 @@ export default function Home() {
                   →
                 </button>
               </div>
+
             </div>
           </div>
+
         </section>
 
         {/* Footer */}
