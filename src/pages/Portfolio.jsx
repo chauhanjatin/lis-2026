@@ -48,7 +48,7 @@ const projects = {
       id: "5",
       title: "Salviali",
       desc: "Introducing UniqLearn, a cutting-edge platform designed to revolutionize student-teacher...",
-      image: salviali,
+      image: salviali, 
     },
     {
       id: "6",

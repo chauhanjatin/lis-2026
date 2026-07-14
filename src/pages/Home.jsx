@@ -506,14 +506,14 @@ export default function Home() {
 
                 {/* BUTTONS */}
                 <div className="flex flex-wrap items-center gap-4">
-                  <button className="flex items-center gap-2 px-5 py-3 bg-white border border-cyan-400 text-[#181818] text-[16px] md:text-[18px] rounded-full font-semibold hover:bg-cyan-50 transition">
+                  <button className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-[#2a9df4] to-[#2bc0e4] border border-cyan-400 text-[#181818] text-[16px] md:text-[18px] rounded-full font-semibold hover:bg-cyan-50 transition">
                     <span>Start Your Project</span>
                     <ArrowRight className="w-5 h-5 text-[#181818]" />
                   </button>
 
                   <a
                     href="#contact"
-                    className="text-[#181818] text-[16px] md:text-[18px] font-semibold hover:text-cyan-600 transition"
+                    className="text-[#2a9df4] text-[16px] md:text-[18px] font-semibold hover:text-cyan-600 transition"
                   >
                     Book a Free Consultation
                   </a>
@@ -545,18 +545,20 @@ export default function Home() {
 
           {/* VIEW PROJECT BUTTON */}
           <div className="flex justify-center mt-[40px] md:mt-[60px]">
-            <button className="flex items-center gap-2 px-5 py-3 border border-cyan-400 text-[#181818] text-[16px] md:text-[18px] rounded-full font-semibold hover:bg-cyan-50 transition">
+            <button className="group bg-gradient-to-r from-[#2a9df4] to-[#2bc0e4] flex items-center gap-2 px-5 py-3 border border-cyan-400 text-[#181818] text-[16px] md:text-[18px] rounded-full font-semibold transition-all duration-300 hover:brightness-110 hover:shadow-[0_8px_24px_rgba(42,157,244,0.35)] hover:scale-[1.03]">
               <span>View All Projects</span>
-              <ArrowRight className="w-5 h-5 text-[#181818]" />
+              <ArrowRight className="w-5 h-5 text-[#181818] transition-transform duration-300 group-hover:translate-x-1" />
             </button>
           </div>
+
+          
 
           {/* BACKGROUND BLUR SHAPES */}
           {/* <div className="absolute top-0 left-0 w-40 md:w-64 h-40 md:h-64 bg-gray-300 opacity-10 rounded-full blur-3xl"></div> */}
           {/* <div className="absolute bottom-0 right-0 w-60 md:w-96 h-60 md:h-96 bg-gray-300 opacity-10 rounded-full blur-3xl"></div> */}
         </section>
 
-        <section className="bg-white py-12 md:py-16 lg:py-20">
+        <section className="bg-white py-12 md:py-16 lg:py-20">  
           <div className="containerX mx-auto">
             {/* HEADING */}
             <h2 className="text-[28px] sm:text-[36px] md:text-[50px] lg:text-[65px] font-semibold text-[#181818] mb-[30px] md:mb-[40px] lg:mb-[50px] leading-[40px] sm:leading-[50px] md:leading-[65px] lg:leading-[80px]">
@@ -629,7 +631,8 @@ export default function Home() {
         <section className="relative bg-[#f7f7f7] py-36 overflow-hidden">
           <div className="containerX">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-20 items-start text-center md:text-left">
-              {/* 10+ */}
+               
+               {/* 10+ */}
               <div className="relative text-center">
                 <h3 className="text-[56px] font-bold text-black">10+</h3>
                 <p className="mt-4 text-[18px] text-black leading-relaxed">
@@ -709,6 +712,7 @@ export default function Home() {
                   />
                 </div>
               </div>
+              
             </div>
           </div>
         </section>
@@ -732,7 +736,7 @@ export default function Home() {
         </div> */}
 
         <div className="border-y border-[#18181833]">
-          <div className="pl-40 mx-auto flex flex-col lg:flex-row w-full items-start mt-10">
+          <div className="pl-40 mx-auto flex flex-col lg:flex-row w-full items-start">
             {/* LEFT CARD */}
             <div className="flex min-h-[300px] lg:h-[402px] items-center gap-[20px] md:gap-[30px] pr-0 lg:pr-[100px] py-[60px] md:py-[80px] lg:py-[100px] flex-1">
               <div className="inline-flex items-start gap-[20px] md:gap-[30px]">
@@ -758,7 +762,7 @@ export default function Home() {
             </div>
 
             {/* RIGHT CARD */}
-            <div className="flex min-h-[300px] lg:h-[402px] items-center gap-[20px] md:gap-[30px] pl-0 lg:pl-[100px] pr-0 lg:pr-  [200px] py-[60px] md:py-[80px] lg:py-[100px] flex-1 border-l-0 lg:border-l border-[#18181833]">
+            <div className="flex min-h-[300px] lg:h-[402px] items-center gap-[20px] md:gap-[30px] pl-0 lg:pl-[100px] pr-0 lg:pr-[200px] py-[60px] md:py-[80px] lg:py-[100px] flex-1 border-l-0 lg:border-l border-[#18181833]">
               <div className="inline-flex items-start gap-[20px] md:gap-[30px]">
                 <div className="flex flex-col w-full md:w-[480px] lg:w-[576px] items-start gap-4 md:gap-5">
                   <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] lg:text-5xl leading-[36px] md:leading-[46px] lg:leading-[58px] text-[#181818]">
@@ -779,15 +783,17 @@ export default function Home() {
                 />
               </div>
             </div>
+            
           </div>
         </div>
 
         <div className="border-b border-[#18181833]">
           <div className="pl-40 mx-auto flex w-full items-start">
+           
             <div className="flex h-[402px] items-center gap-[30px] pr-[100px] py-[100px] flex-1">
               <div className="inline-flex items-start gap-[30px]">
                 <div className="flex flex-col w-[576px] items-start gap-5">
-                  <h2 className="self-stretch [font-family:'Inter',Helvetica] font-semibold text-5xl leading-[58px] text-[#181818] tracking-[0]">
+                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] lg:text-5xl leading-[36px] md:leading-[46px] lg:leading-[58px] text-[#181818]">
                     Mobile App development
                   </h2>
                   <p className="self-stretch [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[#181818] text-[22px] tracking-[0] leading-[33px]">
@@ -808,7 +814,7 @@ export default function Home() {
             <div className="flex h-[402px] items-center gap-[30px] pl-[100px] pr-[200px] py-[100px] flex-1 border-l border-[#18181833]">
               <div className="inline-flex items-start gap-[30px]">
                 <div className="flex flex-col w-[576px] items-start gap-5">
-                  <h2 className="self-stretch [font-family:'Inter',Helvetica] font-semibold text-5xl leading-[58px] text-[#181818] tracking-[0]">
+                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] lg:text-5xl leading-[36px] md:leading-[46px] lg:leading-[58px] text-[#181818]">
                     Business Services & Consulting
                   </h2>
                   <p className="self-stretch [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[#181818] text-[22px] tracking-[0] leading-[33px]">
@@ -824,6 +830,7 @@ export default function Home() {
                 />
               </div>
             </div>
+
           </div>
         </div>
 
@@ -990,11 +997,11 @@ export default function Home() {
         <section className="mt-[40px] md:mt-[60px] mb-[80px] md:mb-[120px] lg:mb-[140px]">
           <div className="containerX mx-auto">
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 lg:gap-0 p-[30px] sm:p-[50px] md:p-[70px] lg:p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[25px] md:rounded-[30px] lg:rounded-[40px] relative overflow-hidden">
-              <img
+              {/* <img
                 className="absolute inset-0 h-full w-full object-cover opacity-[5%]"
                 alt="Background pattern"
                 src={ctabggif}
-              />
+              /> */}
 
               <p className="relative z-10 text-black text-[36px] sm:text-[48px] md:text-[64px] lg:text-[95px] leading-[120%] font-bold">
                 We work with <br />
@@ -1114,17 +1121,18 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+
             </div>
           </div>
         </section>
 
         {/* Feedbacks */}
         <section id="testimonials"  className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative">
-          <img
+          {/* <img
             className="absolute inset-0 h-full w-full object-cover opacity-[4%]"
             alt="Background pattern"
             src={ctabggif}
-          />
+          /> */}
 
           <div className="mx-auto">
             {/* Heading */}

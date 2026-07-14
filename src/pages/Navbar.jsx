@@ -59,7 +59,7 @@ export default function Navbar() {
 
           <div className="flex justify-center relative">
             {/* NAVBAR */}
-            <div className="flex items-center justify-between bg-[#111] text-white rounded-full px-10 py-4 w-[455px]">
+            <div className="flex items-center justify-between bg-[#111] text-white rounded-full  py-4 w-[455px] ps-10 pe-4">
               {/* CENTER LINKS */}
               <div className="flex gap-[30px] text-[18px]">
                 <span>Portfolio</span>

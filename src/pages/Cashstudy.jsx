@@ -130,6 +130,7 @@ function Cashstudy() {
                 </span>
               </div>
             </div>
+            
           </div>
         </div>
 
