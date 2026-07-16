@@ -78,11 +78,7 @@ function Career() {
       <section className="mt-[60px] mb-[130px]">
         <div className="containerX mx-auto">
           <div className="flex items-center justify-between p-[66px] lg:p-[70px] 2xl:p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[40px] relative overflow-hidden">
-            <img
-              className="absolute inset-0 h-full w-full object-cover opacity-10"
-              alt="Background pattern"
-              src={ctabggif}
-            />
+          
             <p className="relative text-black text-[26px] lg:text-[30px] 2xl:text-[60px] font-bold">
               No openings? Send your{" "}
               <span className="text-white font-semibold italic">CV</span> —

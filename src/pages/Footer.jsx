@@ -1,15 +1,16 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import callfooter from "../assets/call-footer.svg";
 import emailfooter from "../assets/email-footer.svg";
 import locationfooter from "../assets/location-footer.svg";
 import logo from "../assets/lis-logo.svg";
 
 const companyLinks = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Portfolio", href: "#" },
-  { label: "Services", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const helpLinks = [
@@ -66,12 +67,12 @@ export default function Footer() {
               <ul className="inline-flex flex-col items-start gap-3 md:gap-5">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="font-normal text-[#ffffffb2] text-[14px] xl:text-[16px] hover:text-white transition-colors"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

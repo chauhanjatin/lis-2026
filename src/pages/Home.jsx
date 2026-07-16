@@ -453,8 +453,10 @@ export default function Home() {
 
   const scrollLeft = () => {
     if (sliderRef.current) {
+      const card = sliderRef.current.querySelector("[data-feedback-card]");
+      const amount = card ? card.offsetWidth + 24 : 480;
       sliderRef.current.scrollBy({
-        left: -620,
+        left: -amount,
         behavior: "smooth",
       });
     }
@@ -462,8 +464,10 @@ export default function Home() {
 
   const scrollRight = () => {
     if (sliderRef.current) {
+      const card = sliderRef.current.querySelector("[data-feedback-card]");
+      const amount = card ? card.offsetWidth + 24 : 480;
       sliderRef.current.scrollBy({
-        left: 620,
+        left: amount,
         behavior: "smooth",
       });
     }
@@ -482,7 +486,7 @@ export default function Home() {
               <div className="relative">
                 {/* HEADING */}
 
-                <h1 className="text-[34px] sm:text-[40px] md:text-[60px] lg:text-[80px] font-semibold text-[#181818] leading-[42px] sm:leading-[52px] md:leading-[80px] lg:leading-[120px] mb-[30px]">
+                <h1 className="text-[34px] sm:text-[40px] md:text-[60px] lg:text-[80px] midxl:!text-[60px] font-semibold text-[#181818] leading-[42px] sm:leading-[52px] md:leading-[80px] lg:leading-[120px] midxl:!leading-[80px] mb-[30px]">
                   <div className="border border-[#828282] rounded-full me-3 w-[177px] h-[94px] inline-flex overflow-hidden relative top-4">
                     <img
                       src={upworkgif}
@@ -669,7 +673,6 @@ export default function Home() {
                     className="absolute right-[60px] top-[-40px]"
                   />
                 </div>
-
               </div>
 
               {/* 27+ */}
@@ -736,16 +739,16 @@ export default function Home() {
         </div> */}
 
         <div className="border-y border-[#18181833]">
-          <div className="pl-40 mx-auto flex flex-col lg:flex-row w-full items-start">
+          <div className="mx-auto flex w-full flex-col items-start px-6 sm:px-10 lg:px-16 xl:flex-row xl:pr-0 xl:pl-40">
             {/* LEFT CARD */}
-            <div className="flex min-h-[300px] lg:h-[402px] items-center gap-[20px] md:gap-[30px] pr-0 lg:pr-[100px] py-[60px] md:py-[80px] lg:py-[100px] flex-1">
+            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pr-[100px] flex-1">
               <div className="inline-flex items-start gap-[20px] md:gap-[30px]">
-                <div className="flex flex-col w-full md:w-[480px] lg:w-[576px] items-start gap-4 md:gap-5">
-                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] lg:text-5xl leading-[36px] md:leading-[46px] lg:leading-[58px] text-[#181818]">
+                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] md:gap-5">
+                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl leading-[36px] md:leading-[46px] xl:leading-[58px] text-[#181818]">
                     Mobile App development
                   </h2>
 
-                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] lg:text-[22px] leading-[26px] md:leading-[30px] lg:leading-[33px]">
+                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] leading-[26px] md:leading-[30px] xl:leading-[33px]">
                     We design and develop high-performance Android, iOS, and
                     cross-platform apps using the latest technologies. Our apps
                     are optimized for speed, security, and seamless user
@@ -762,14 +765,61 @@ export default function Home() {
             </div>
 
             {/* RIGHT CARD */}
-            <div className="flex min-h-[300px] lg:h-[402px] items-center gap-[20px] md:gap-[30px] pl-0 lg:pl-[100px] pr-0 lg:pr-[200px] py-[60px] md:py-[80px] lg:py-[100px] flex-1 border-l-0 lg:border-l border-[#18181833]">
+            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pl-[100px] xl:pr-[200px] flex-1 border-t xl:border-t-0 xl:border-l border-[#18181833]">
               <div className="inline-flex items-start gap-[20px] md:gap-[30px]">
-                <div className="flex flex-col w-full md:w-[480px] lg:w-[576px] items-start gap-4 md:gap-5">
-                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] lg:text-5xl leading-[36px] md:leading-[46px] lg:leading-[58px] text-[#181818]">
+                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] md:gap-5">
+                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl leading-[36px] md:leading-[46px] xl:leading-[58px] text-[#181818]">
                     Business Services & Consulting
                   </h2>
 
-                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] lg:text-[22px] leading-[26px] md:leading-[30px] lg:leading-[33px]">
+                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] leading-[26px] md:leading-[30px] xl:leading-[33px]">
+                    We help companies identify growth opportunities, improve
+                    workflows, automate operations, and build digital solutions
+                    that support long-term scalability and success.
+                  </p>
+                </div>
+
+                <img
+                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px]"
+                  alt="Carose"
+                  src={cardarrow}
+                />
+              </div>
+            </div>
+            
+          </div>
+          <div className="mx-auto flex w-full flex-col items-start px-6 sm:px-10 lg:px-16 xl:flex-row xl:pr-0 xl:pl-40 border-t border-[#18181833]">
+            {/* LEFT CARD */}
+            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pr-[100px] flex-1">
+              <div className="inline-flex items-start gap-[20px] md:gap-[30px]">
+                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] md:gap-5">
+                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl leading-[36px] md:leading-[46px] xl:leading-[58px] text-[#181818]">
+                    Mobile App development
+                  </h2>
+                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] leading-[26px] md:leading-[30px] xl:leading-[33px]">
+                    We design and develop high-performance Android, iOS, and
+                    cross-platform apps using the latest technologies. Our apps
+                    are optimized for speed, security, and seamless user
+                    experiences.
+                  </p>
+                </div>
+                <img
+                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px]"
+                  alt="Carose"
+                  src={cardarrow}
+                />
+              </div>
+            </div>
+
+            {/* RIGHT CARD */}
+            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pl-[100px] xl:pr-[200px] flex-1 border-t xl:border-t-0 xl:border-l border-[#18181833]">
+              <div className="inline-flex items-start gap-[20px] md:gap-[30px]">
+                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] md:gap-5">
+                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl leading-[36px] md:leading-[46px] xl:leading-[58px] text-[#181818]">
+                    Business Services & Consulting
+                  </h2>
+
+                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] leading-[26px] md:leading-[30px] xl:leading-[33px]">
                     We help companies identify growth opportunities, improve
                     workflows, automate operations, and build digital solutions
                     that support long-term scalability and success.
@@ -787,60 +837,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="border-b border-[#18181833]">
-          <div className="pl-40 mx-auto flex w-full items-start">
-           
-            <div className="flex h-[402px] items-center gap-[30px] pr-[100px] py-[100px] flex-1">
-              <div className="inline-flex items-start gap-[30px]">
-                <div className="flex flex-col w-[576px] items-start gap-5">
-                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] lg:text-5xl leading-[36px] md:leading-[46px] lg:leading-[58px] text-[#181818]">
-                    Mobile App development
-                  </h2>
-                  <p className="self-stretch [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[#181818] text-[22px] tracking-[0] leading-[33px]">
-                    We design and develop high-performance Android, iOS, and
-                    cross-platform apps using the latest technologies. Our apps
-                    are optimized for speed, security, and seamless user
-                    experiences.
-                  </p>
-                </div>
-                <img
-                  className="border border-black rounded-full py-[20px] px-[17px]"
-                  alt="Carose"
-                  src={cardarrow}
-                />
-              </div>
-            </div>
-
-            <div className="flex h-[402px] items-center gap-[30px] pl-[100px] pr-[200px] py-[100px] flex-1 border-l border-[#18181833]">
-              <div className="inline-flex items-start gap-[30px]">
-                <div className="flex flex-col w-[576px] items-start gap-5">
-                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] lg:text-5xl leading-[36px] md:leading-[46px] lg:leading-[58px] text-[#181818]">
-                    Business Services & Consulting
-                  </h2>
-                  <p className="self-stretch [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[#181818] text-[22px] tracking-[0] leading-[33px]">
-                    We help companies identify growth opportunities, improve
-                    workflows, automate operations, and build digital solutions
-                    that support long-term scalability and success.
-                  </p>
-                </div>
-                <img
-                  className="border border-black rounded-full py-[20px] px-[17px]"
-                  alt="Carose"
-                  src={cardarrow}
-                />
-              </div>
-            </div>
-
-          </div>
-        </div>
-
         {/* Our process */}
-        <section ref={sectionRef} className="w-full h-[200vh]">
+        <section ref={sectionRef} className="w-full h-[100vh] overflow-hidden">
           <div className="sticky top-0 flex items-center justify-center h-screen">
             <div className="flex justify-center">
               <p
                 style={{ transform: `scale(${scale})` }}
-                className="w-full px-[300px] py-[150px] bg-[#181818] text-white text-[90px] font-bold leading-[100px] text-center"
+                className="w-[min(86vw,850px)] px-10 py-20 md:px-20 md:py-28 bg-[#181818] text-white text-[clamp(3.5rem,7vw,5.625rem)] font-bold leading-[1.1] text-center"
               >
                 Our <br /> Process
               </p>
@@ -875,7 +878,7 @@ export default function Home() {
           <div className="Discover_items text-white">
             <div className="Discover_content">
               <span className="text-[40px]">[ 1 ]</span>
-              <h2 className="text-[158px] font-semibold leading-none">
+              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none">
                 Discover
               </h2>
               <p className="max-w-[591px] text-[22px]">
@@ -895,7 +898,7 @@ export default function Home() {
 
             <div className="Discover_content">
               <span className="text-[40px]">[ 2 ]</span>
-              <h2 className="text-[158px] font-semibold leading-none">
+              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none">
                 Design
               </h2>
               <p className="max-w-[591px] text-[22px]">
@@ -908,7 +911,7 @@ export default function Home() {
           <div className="Discover_items text-white">
             <div className="Discover_content">
               <span className="text-[40px]">[ 3 ]</span>
-              <h2 className="text-[158px] font-semibold leading-none">Build</h2>
+              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none">Build</h2>
               <p className="max-w-[591px] text-[22px]">
                 We develop secure, scalable, and future-ready digital products
                 using clean code and industry best practices.
@@ -929,7 +932,7 @@ export default function Home() {
                 Your product is thoroughly tested and deployed with complete
                 support for maintenance and future updates.
               </p>
-              <h2 className="text-[158px] font-semibold leading-none">
+              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none">
                 Deliver
               </h2>
               <span className="text-[40px]">[ 4 ]</span>
@@ -1037,7 +1040,6 @@ export default function Home() {
             </h2>
 
             <div className="tools_marquee">
-
               {/* Row 1 */}
               <div className="overflow-hidden w-full mb-6 md:mb-8">
                 <div className="marquee gap-5 md:gap-8 lg:gap-10">
@@ -1121,49 +1123,53 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-
             </div>
           </div>
         </section>
 
         {/* Feedbacks */}
-        <section id="testimonials"  className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative">
-          {/* <img
-            className="absolute inset-0 h-full w-full object-cover opacity-[4%]"
-            alt="Background pattern"
-            src={ctabggif}
-          /> */}
-
+        <section id="testimonials" className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative">
           <div className="mx-auto">
             {/* Heading */}
-            <h2 className="text-[36px] sm:text-[50px] md:text-[65px] lg:text-[80px] font-bold text-[#1C1C1C] mb-12 md:mb-16 lg:mb-20 text-center leading-[120%]">
+            <h2 className="containerX mx-auto text-[36px] sm:text-[50px] md:text-[65px] lg:text-[80px] font-bold text-[#1C1C1C] mb-12 md:mb-16 lg:mb-20 text-center leading-[120%]">
               Feedback from Our <br /> Customers
             </h2>
 
             {/* Slider Wrapper */}
             <div className="relative">
               {/* Cards Row */}
-              <div ref={sliderRef} className="flex gap-5 md:gap-8 overflow-x-auto scroll-smooth no-scrollbar">
+              <div
+                ref={sliderRef}
+                className="flex gap-5 md:gap-6 lg:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar px-[16px] sm:px-[24px] md:px-[40px] lg:px-[80px] xl:px-[120px] 2xl:px-[200px] mt-10"
+              >
                 {[1, 2, 3, 4, 5, 6].map((item, index) => (
                   <div
                     key={index}
-                    className="min-w-[280px] sm:min-w-[360px] md:min-w-[450px] lg:min-w-[592px] bg-[#F7F7F7] rounded-[24px] md:rounded-[32px] p-6 md:p-8 lg:p-10 shadow-sm">
+                    data-feedback-card
+                    className="snap-start shrink-0 w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] xl:w-[500px] bg-white rounded-[20px] md:rounded-[28px] p-5 sm:p-6 md:p-8 flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-[#ECECEC]"
+                  >
                     {/* Top */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3 md:gap-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex items-center gap-3 md:gap-4 min-w-0">
                         <img
                           src={profileimg}
                           alt="Profile"
-                          className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full object-cover"/>
-                        <div>
-                          <h4 className="font-normal text-[16px] md:text-[18px] text-[#1C1C1C]">
+                          className="w-11 h-11 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full object-cover shrink-0"
+                        />
+                        <div className="min-w-0">
+                          <h4 className="font-semibold text-[15px] md:text-[17px] lg:text-[18px] text-[#1C1C1C] truncate">
                             Harry Maguire
                           </h4>
-
-                          <p className="text-[#18181866] text-[14px] md:text-[16px]">CEO, company</p>
+                          <p className="text-[#18181866] text-[13px] md:text-[15px] truncate">
+                            CEO, company
+                          </p>
                         </div>
                       </div>
-                      <img src={feedbackstars} alt="rating" className="w-[80px] md:w-[100px] lg:w-[110px]"/>
+                      <img
+                        src={feedbackstars}
+                        alt="rating"
+                        className="w-[72px] md:w-[90px] lg:w-[100px] shrink-0 mt-1"
+                      />
                     </div>
 
                     {/* Title */}
@@ -1172,15 +1178,19 @@ export default function Home() {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-center text-[#18181866] text-[14px] md:text-[16px] lg:text-[18px] mt-3 md:mt-4 leading-relaxed">
+                    <p className="text-center text-[#18181899] text-[14px] md:text-[15px] lg:text-[16px] mt-3 md:mt-4 leading-[160%] flex-1">
                       UI Wiki transformed our design process! The templates are
                       modern, user-friendly, and saved us countless hours
                     </p>
 
                     {/* Bottom */}
-                    <div className="flex justify-between items-center mt-6 md:mt-8 lg:mt-10">
-                      <img src={feedbackicon} alt="logo" />
-                      <p className="text-[14px] md:text-[16px] text-[#181818] font-semibold">
+                    <div className="flex justify-between items-center mt-6 md:mt-8 pt-2">
+                      <img
+                        src={feedbackicon}
+                        alt="logo"
+                        className="w-8 h-8 md:w-9 md:h-9 object-contain"
+                      />
+                      <p className="text-[13px] md:text-[15px] text-[#181818] font-semibold">
                         21.05.2024
                       </p>
                     </div>
@@ -1189,17 +1199,19 @@ export default function Home() {
               </div>
 
               {/* Arrows */}
-              <div className="flex justify-center items-center gap-4 md:gap-6 mt-10 md:mt-14">
+              <div className="flex justify-center items-center gap-4 md:gap-5 mt-10 md:mt-14">
                 <button
                   onClick={scrollLeft}
-                  className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-200 transition duration-300"
+                  aria-label="Previous feedback"
+                  className="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#D0D0D0] bg-transparent text-[#1C1C1C] hover:bg-white hover:border-[#1C1C1C] transition duration-300"
                 >
                   ←
                 </button>
 
                 <button
                   onClick={scrollRight}
-                  className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-200 transition duration-300"
+                  aria-label="Next feedback"
+                  className="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#D0D0D0] bg-transparent text-[#1C1C1C] hover:bg-white hover:border-[#1C1C1C] transition duration-300"
                 >
                   →
                 </button>
@@ -1207,7 +1219,6 @@ export default function Home() {
 
             </div>
           </div>
-
         </section>
 
         {/* Footer */}

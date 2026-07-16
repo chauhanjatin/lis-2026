@@ -1,3 +1,4 @@
+
 /* Reset default styles for full-width layout */
 #root {
   max-width: 100%;
@@ -248,6 +249,50 @@ html {
 
 .leftDiscover_items:hover .leftDiscover_img {
   right: 0;
+}
+
+@media screen and (max-width: 1399px) {
+  .Discover_section {
+    padding: 32px;
+  }
+
+  .Discover_items,
+  .leftDiscover_items {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 72px 0;
+  }
+
+  .Discover_content {
+    flex-wrap: wrap;
+    gap: 28px 48px;
+  }
+
+  .Discover_img,
+  .leftDiscover_img {
+    position: static;
+    max-width: 200px;
+  }
+
+  .leftDiscover_img {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Discover_section {
+    padding: 24px;
+  }
+
+  .Discover_items,
+  .leftDiscover_items {
+    gap: 28px;
+    padding: 48px 0;
+  }
+
+  .Discover_content {
+    gap: 20px;
+  }
 }
 
 

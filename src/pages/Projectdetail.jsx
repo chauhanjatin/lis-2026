@@ -42,7 +42,7 @@ function Projectdetail() {
       {/* Hero Section */}
       <section className="containerX mx-auto mt-[90px] mb-[200px]">
         <div className="relative">
-          <div>
+          <div className="mt-[100px]">
             <h1 className="text-[42px] lg:text-[90px] font-bold leading-[130px]">
               UniqLearn – AI- <br />
               Powered E-Learning <br />& LMS Platform
@@ -308,11 +308,7 @@ function Projectdetail() {
       <section className="mt-[60px] mb-[130px]">
         <div className="containerX mx-auto">
           <div className="flex items-center justify-between p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[40px] relative overflow-hidden">
-            <img
-              className="absolute inset-0 h-full w-full object-cover opacity-10"
-              alt="Background pattern"
-              src={ctabggif}
-            />
+           
             <p className="relative  text-black text-[60px] font-bold">
               Bring your{" "}
               <span className="text-white font-semibold italic">vision </span>

@@ -190,11 +190,7 @@ function Portfolio() {
       <section className="mt-[60px] mb-[130px]">
         <div className="containerX mx-auto">
           <div className="flex items-center justify-between p-[62px] xl:p-[82px] 2xl:p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[40px] relative overflow-hidden">
-            <img
-              className="absolute inset-0 h-full w-full object-cover opacity-10"
-              alt="Background pattern"
-              src={ctabggif}
-            />
+           
             <p className="relative text-black text-[34px] lg:text-[40px] xl:text-[52px] 2xl:text-[60px] font-bold">
               Your{" "}
               <span className="text-white font-semibold italic">

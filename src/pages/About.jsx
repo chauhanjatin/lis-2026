@@ -26,6 +26,10 @@ import data from "../data/projects.json";
 import profileimg from "../assets/feedback-img.png";
 import feedbackicon from "../assets/feedback-icon.png";
 import feedbackstars from "../assets/feedback-stars.png";
+import arrowblue from "../assets/arrow-blue.png";
+import arrowgreen from "../assets/arrow-green.png";
+import arrowred from "../assets/arrow-red.png";
+import arrowpink from "../assets/arrow-pink.png";
 import Footer from "./Footer";
 
 const features = [
@@ -88,8 +92,10 @@ function About() {
 
   const scrollLeft = () => {
     if (sliderRef.current) {
+      const card = sliderRef.current.querySelector("[data-feedback-card]");
+      const amount = card ? card.offsetWidth + 24 : 480;
       sliderRef.current.scrollBy({
-        left: -620,
+        left: -amount,
         behavior: "smooth",
       });
     }
@@ -97,8 +103,10 @@ function About() {
 
   const scrollRight = () => {
     if (sliderRef.current) {
+      const card = sliderRef.current.querySelector("[data-feedback-card]");
+      const amount = card ? card.offsetWidth + 24 : 480;
       sliderRef.current.scrollBy({
-        left: 620,
+        left: amount,
         behavior: "smooth",
       });
     }
@@ -166,72 +174,90 @@ function About() {
         </section>
 
         {/* counters */}
-        <section className="relative py-16 md:py-24 lg:py-32 overflow-hidden">
-          <div className="containerX mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 md:gap-16 lg:gap-20 items-start text-center md:text-left">
-              {/* 1 */}
-              <div className="relative">
-                <h3 className="text-[36px] sm:text-[44px] md:text-[48px] lg:text-[56px] font-bold text-black">
-                  10+
-                </h3>
-
-                <p className="mt-3 md:mt-4 text-[14px] md:text-[16px] lg:text-[18px] text-black leading-relaxed">
+        <section className="relative bg-[#f7f7f7] py-36 overflow-hidden">
+          <div className="containerX">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-20 items-start text-center md:text-left">
+               
+               {/* 10+ */}
+              <div className="relative text-center">
+                <h3 className="text-[56px] font-bold text-black">10+</h3>
+                <p className="mt-4 text-[18px] text-black leading-relaxed">
                   Years of <br /> experience
                 </p>
-
-                <span className="absolute md:-bottom-14 bottom-[-40px] left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 flex items-center gap-2 bg-[#C7ECFA] text-black text-[12px] md:text-sm px-3 py-1 rounded">
-                  Ui/Ux Design
-                  <span className="w-2 h-2 bg-[#7BC9E8] rotate-45 inline-block"></span>
-                </span>
+                {/* UI/UX tag */}
+                <div className="relative -bottom-20 left-20 animate-floatY">
+                  <span className="bg-[#C7ECFA] text-black text-sm px-3 py-1 shadow-[0px_4px_10px_0px_#0000001A]">
+                    Ui/Ux Design
+                  </span>
+                  <img
+                    src={arrowblue}
+                    alt=""
+                    className="absolute right-[70px] top-[-40px]"
+                  />
+                </div>
               </div>
 
-              {/* 2 */}
-              <div className="relative text-center">
-                <h3 className="text-[36px] sm:text-[44px] md:text-[48px] lg:text-[56px] font-bold text-black">
-                  55+
-                </h3>
-
-                <p className="mt-3 md:mt-4 text-[14px] md:text-[16px] lg:text-[18px] text-black leading-relaxed">
+              {/* 55+ */}
+              <div className="relative text-center top-[30px]">
+                <h3 className="text-[56px] font-bold text-black">55+</h3>
+                <p className="mt-4 text-[18px] text-black leading-relaxed">
                   Successful <br /> Projects
                 </p>
 
-                <span className="absolute md:-top-14 top-[-36px] left-1/2 -translate-x-1/2 flex items-center gap-2 bg-[#CFF3D2] text-black text-[12px] md:text-sm px-3 py-1 rounded">
-                  Web Development
-                  <span className="w-2 h-2 bg-[#7EDC8C] rotate-45 inline-block"></span>
-                </span>
-
-                <span className="absolute md:-bottom-16 bottom-[-40px] left-1/2 -translate-x-1/2 flex items-center gap-2 bg-[#F3D2FA] text-black text-[12px] md:text-sm px-3 py-1 rounded">
-                  Web Design
-                  <span className="w-2 h-2 bg-[#D78AE8] rotate-45 inline-block"></span>
-                </span>
+                {/*Web Development tag */}
+                <div className="relative top-[-190px] left-20 animate-floatYReverse">
+                  <span className="bg-[#BBF5AB] text-black text-sm px-3 py-1 shadow-[0px_4px_10px_0px_#0000001A]">
+                    Web Development
+                  </span>
+                  <img
+                    src={arrowgreen}
+                    alt=""
+                    className="absolute right-[60px] top-[-40px]"
+                  />
+                </div>
               </div>
 
-              {/* 3 */}
-              <div className="relative text-center">
-                <h3 className="text-[36px] sm:text-[44px] md:text-[48px] lg:text-[56px] font-bold text-black">
-                  27+
-                </h3>
-
-                <p className="mt-3 md:mt-4 text-[14px] md:text-[16px] lg:text-[18px] text-black leading-relaxed">
-                  Happy <br /> Clients
+              {/* 27+ */}
+              <div className="relative text-center top-[60px]">
+                <h3 className="text-[56px] font-bold text-black">27+</h3>
+                <p className="mt-4 text-[18px] text-black leading-relaxed">
+                  Happy <br />
+                  Clients
                 </p>
 
-                <span className="absolute md:-top-12 top-[-32px] right-1/2 md:right-0 translate-x-1/2 md:translate-x-0 flex items-center gap-2 bg-[#F9C5C5] text-black text-[12px] md:text-sm px-3 py-1 rounded">
-                  Mobile development
-                  <span className="w-2 h-2 bg-[#F28C8C] rotate-45 inline-block"></span>
-                </span>
+                {/*Web Development tag */}
+                <div className="relative left-[-200px] animate-floatY">
+                  <span className="bg-[#F2CAF8] text-black text-sm px-3 py-1 shadow-[0px_4px_10px_0px_#0000001A]">
+                    Web Design
+                  </span>
+                  <img
+                    src={arrowpink}
+                    alt=""
+                    className="absolute left-[70px] top-[-50px]"
+                  />
+                </div>
               </div>
 
-              {/* 4 */}
-              <div className="text-center md:text-right">
-                <h3 className="text-[36px] sm:text-[44px] md:text-[48px] lg:text-[56px] font-bold text-black">
-                  15+
-                </h3>
-
-                <p className="mt-3 md:mt-4 text-[14px] md:text-[16px] lg:text-[18px] text-black leading-relaxed">
+              {/* 15+ */}
+              <div className="relative text-center top-[90px]">
+                <h3 className="text-[56px] font-bold text-black">15+</h3>
+                <p className="mt-4 text-[18px] text-black leading-relaxed">
                   Expert Developers <br /> & Designers
                 </p>
+
+                {/*Web Development tag */}
+                <div className="relative top-[-190px] left-[-150px] animate-floatYReverse">
+                  <span className="bg-[#F8A1A1] text-black text-sm px-3 py-1 shadow-[0px_4px_10px_0px_#0000001A]">
+                    Mobile development
+                  </span>
+                  <img
+                    src={arrowred}
+                    alt=""
+                    className="absolute left-[50px] top-[-40px]"
+                  />
+                </div>
               </div>
+              
             </div>
           </div>
         </section>
@@ -358,11 +384,7 @@ function About() {
                      rounded-[30px] md:rounded-[40px] relative overflow-hidden"
             >
               {/* Background Pattern */}
-              <img
-                className="absolute inset-0 h-full w-full object-cover opacity-10"
-                alt="Background pattern"
-                src={ctabggif}
-              />
+            
 
               {/* Text */}
               <p
@@ -455,40 +477,39 @@ function About() {
 
         {/* Feedbacks */}
         <section
-          id="testimonials" className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative">
-          <img
-            className="absolute inset-0 h-full w-full object-cover opacity-10"
-            alt="Background pattern"
-            src={ctabggif}
-          />
+          id="testimonials"
+          className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative">
           <div className="mx-auto">
             {/* Heading */}
-            <h2 className="text-[36px] sm:text-[50px] md:text-[50px] lg:text-[60px] font-bold text-[#1C1C1C] mb-12 md:mb-16 lg:mb-20 text-center leading-[120%]">
+            <h2 className="containerX mx-auto text-[36px] sm:text-[50px] md:text-[50px] lg:text-[60px] font-bold text-[#1C1C1C] mb-12 md:mb-16 lg:mb-20 text-center leading-[120%]">
               Feedback from Our <br /> Customers
             </h2>
             {/* Slider Wrapper */}
             <div className="relative">
               {/* Cards Row */}
               <div
-                ref={sliderRef} className="flex gap-5 md:gap-8 overflow-x-auto scroll-smooth no-scrollbar">
+                ref={sliderRef}
+                className="flex gap-5 md:gap-6 lg:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar px-[16px] sm:px-[24px] md:px-[40px] lg:px-[80px] xl:px-[120px] 2xl:px-[200px]"
+              >
                 {[1, 2, 3, 4, 5, 6].map((item, index) => (
                   <div
                     key={index}
-                    className="min-w-[280px] sm:min-w-[360px] md:min-w-[450px] lg:min-w-[592px] bg-[#F7F7F7] rounded-[24px] md:rounded-[32px] p-6 md:p-8 lg:p-10 shadow-sm"
+                    data-feedback-card
+                    className="snap-start shrink-0 w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] xl:w-[500px] bg-white rounded-[20px] md:rounded-[28px] p-5 sm:p-6 md:p-8 flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-[#ECECEC]"
                   >
                     {/* Top */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-3 md:gap-4">
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="flex items-center gap-3 md:gap-4 min-w-0">
                         <img
                           src={profileimg}
                           alt="Profile"
-                          className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full object-cover"
+                          className="w-11 h-11 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full object-cover shrink-0"
                         />
-                        <div>
-                          <h4 className="font-normal text-[16px] md:text-[18px] text-[#1C1C1C]">
+                        <div className="min-w-0">
+                          <h4 className="font-semibold text-[15px] md:text-[17px] lg:text-[18px] text-[#1C1C1C] truncate">
                             Harry Maguire
                           </h4>
-                          <p className="text-[#18181866] text-[14px] md:text-[16px]">
+                          <p className="text-[#18181866] text-[13px] md:text-[15px] truncate">
                             CEO, company
                           </p>
                         </div>
@@ -496,7 +517,7 @@ function About() {
                       <img
                         src={feedbackstars}
                         alt="rating"
-                        className="w-[80px] md:w-[100px] lg:w-[110px]"
+                        className="w-[72px] md:w-[90px] lg:w-[100px] shrink-0 mt-1"
                       />
                     </div>
                     {/* Title */}
@@ -504,14 +525,18 @@ function About() {
                       Top-Notch Quality
                     </h3>
                     {/* Description */}
-                    <p className="text-center text-[#18181866] text-[14px] md:text-[16px] lg:text-[18px] mt-3 md:mt-4 leading-relaxed">
+                    <p className="text-center text-[#18181899] text-[14px] md:text-[15px] lg:text-[16px] mt-3 md:mt-4 leading-[160%] flex-1">
                       UI Wiki transformed our design process! The templates are
                       modern, user-friendly, and saved us countless hours
                     </p>
                     {/* Bottom */}
-                    <div className="flex justify-between items-center mt-6 md:mt-8 lg:mt-10">
-                      <img src={feedbackicon} alt="logo" />
-                      <p className="text-[14px] md:text-[16px] text-[#181818] font-semibold">
+                    <div className="flex justify-between items-center mt-6 md:mt-8 pt-2">
+                      <img
+                        src={feedbackicon}
+                        alt="logo"
+                        className="w-8 h-8 md:w-9 md:h-9 object-contain"
+                      />
+                      <p className="text-[13px] md:text-[15px] text-[#181818] font-semibold">
                         21.05.2024
                       </p>
                     </div>
@@ -520,16 +545,18 @@ function About() {
               </div>
 
               {/* Arrows */}
-              <div className="flex justify-center items-center gap-4 md:gap-6 mt-10 md:mt-14">
+              <div className="flex justify-center items-center gap-4 md:gap-5 mt-10 md:mt-14">
                 <button
                   onClick={scrollLeft}
-                  className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-200 transition duration-300"
+                  aria-label="Previous feedback"
+                  className="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#D0D0D0] bg-transparent text-[#1C1C1C] hover:bg-white hover:border-[#1C1C1C] transition duration-300"
                 >
                   ←
                 </button>
                 <button
                   onClick={scrollRight}
-                  className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-200 transition duration-300"
+                  aria-label="Next feedback"
+                  className="w-11 h-11 md:w-12 md:h-12 flex items-center justify-center rounded-full border border-[#D0D0D0] bg-transparent text-[#1C1C1C] hover:bg-white hover:border-[#1C1C1C] transition duration-300"
                 >
                   →
                 </button>

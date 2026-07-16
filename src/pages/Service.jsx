@@ -280,11 +280,7 @@ function Service() {
         <section className="mt-[40px] md:mt-[60px] mb-[80px] md:mb-[130px]">
           <div className="containerX mx-auto">
             <div className="flex flex-row items-center justify-between gap-8 p-[30px] md:p-[60px] lg:p-[75px] xl:p-[88px] 2xl:p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[30px] md:rounded-[40px] relative overflow-hidden">
-              <img
-                className="absolute inset-0 h-full w-full object-cover opacity-10"
-                alt="Background pattern"
-                src={ctabggif}
-              />
+         ]
 
               {/* TEXT */}
               <p className="relative z-10 text-black text-[28px] md:text-[35px] xl:text-[52px] 2xl:text-[60px] font-bold xl:leading-[80px] 2xl:leading-[90px]">
