@@ -28,9 +28,20 @@ const navigationButtons = [
 ];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);  
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef(null);
   const menuButtonRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 0);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     if (!menuOpen) return;
@@ -71,14 +82,20 @@ export default function Navbar() {
   return (
     <div className="">
       <header className="fixed top-0 left-0 right-0 z-50 mx-auto pt-10 opacity-0 animate-fade-in [--animation-delay:200ms] containerX">
-        <nav className="flex items-center justify-between">
+        <nav
+          className={`flex items-center justify-between py-2 px-3 rounded-full transition-all duration-300 ps-4  ${
+            scrolled
+              ? "border border-[#e5e7eb] bg-white"
+              : "border-[1px] border-transparent bg-transparent"
+          }`}
+        >
           <Link to="/" className="flex items-center">
             <img src={logo} alt="LIS Logo" />
           </Link>
 
           <div className="flex justify-center relative">
             {/* NAVBAR */}
-            <div className="flex items-center justify-between bg-[#111] text-white rounded-full  py-4 w-[455px] ps-10 pe-4">
+            <div className="flex items-center justify-between bg-[#111] text-white rounded-full  py-3 w-[455px] ps-10 pe-4">
               {/* CENTER LINKS */}
               <div className="flex gap-[30px] text-[18px]">
                 <NavLink
