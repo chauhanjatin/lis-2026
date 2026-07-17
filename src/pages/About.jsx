@@ -489,7 +489,7 @@ function About() {
               {/* Cards Row */}
               <div
                 ref={sliderRef}
-                className="flex gap-5 md:gap-6 lg:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar px-[16px] sm:px-[24px] md:px-[40px] lg:px-[80px] xl:px-[120px] 2xl:px-[200px]"
+                className="flex gap-5 md:gap-6 lg:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar px-[16px] sm:px-[24px] md:px-[40px] lg:px-[80px] xl:px-[120px] 2xl:px-[200px] mt-10"
               >
                 {[1, 2, 3, 4, 5, 6].map((item, index) => (
                   <div

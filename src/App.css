@@ -251,6 +251,25 @@ html {
   right: 0;
 }
 
+@media screen and (max-width: 1560px) {
+  .Discover_content {
+    gap: 50px;
+}
+.Discover_items {
+  grid-gap: 50px;
+}
+
+.leftDiscover_items {
+
+  padding: 60px 0;
+}
+
+.Discover_items {
+  padding: 60px 0;
+}
+ 
+}
+
 @media screen and (max-width: 1399px) {
   .Discover_section {
     padding: 32px;

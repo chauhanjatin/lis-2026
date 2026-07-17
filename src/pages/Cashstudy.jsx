@@ -24,7 +24,7 @@ function Cashstudy() {
               <h3 className="text-[16px] md:text-[18px] lg:text-[20px] mb-3 font-light text-[#181818]">
                 CASE STUDIES
               </h3>
-              <h1 className="text-[36px] md:text-[32px] lg:text-[40px] xl:text-[60px] 2xl:text-[70px] font-semibold text-[#181818] lg:leading-[170%] 2xl:leading-[120%] 2xl:mb-[50px]">
+              <h1 className="text-[36px] md:text-[32px] lg:text-[40px] xl:text-[60px] 2xl:text-[70px] font-semibold text-[#181818] lg:leading-[170%] 2xl:leading-[120%] 2xl:mb-[50px] midxl:!text-[60px]">
                 Behind Every{" "}
                 <span className="bg-[#1EB2BE] text-white rounded-[8px] inline-block leading-none p-3">
                   Successful
@@ -168,7 +168,7 @@ function Cashstudy() {
         <div className="containerX mx-auto">
           <div className="flex items-center justify-between p-[65px] lg:p-[72px] 2xl:p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[40px] relative overflow-hidden">
            
-            <p className="relative z-10 text-black text-[28px] lg:text-[32px] xl:text-[45px] 2xl:text-[60px] font-bold">
+            <p className="relative z-10 text-black text-[28px] lg:text-[32px] xl:text-[45px] 2xl:text-[60px] font-bold midxl:!text-[50px]">
               Your success{" "}
               <span className="text-white font-semibold italic">story</span> can
               be the next <br /> one we showcase.

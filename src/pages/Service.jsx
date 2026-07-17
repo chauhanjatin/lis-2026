@@ -87,7 +87,7 @@ function Service() {
                 </div>
 
                 <div className="flex items-start">
-                  <h2 className="text-[40px] md:text-[60px] lg:text-[62px] xl:text-[90px] 2xl:text-[110px] font-bold leading-[110%] text-[#181818]">
+                  <h2 className="text-[40px] md:text-[60px] lg:text-[62px] xl:text-[90px] 2xl:text-[110px] font-bold leading-[110%] text-[#181818] midxl:!text-[80px]">
                     Web <br className="hidden sm:block" /> Development
                   </h2>
                 </div>
@@ -136,7 +136,7 @@ function Service() {
 
                 {/* RIGHT : HEADING */}
                 <div className="flex items-start">
-                  <h2 className="text-[40px] md:text-[60px] lg:text-[62px] xl:text-[90px] 2xl:text-[110px] font-bold leading-[110%] text-[#181818]">
+                  <h2 className="text-[40px] md:text-[60px] lg:text-[62px] xl:text-[90px] 2xl:text-[110px] font-bold leading-[110%] text-[#181818] midxl:!text-[80px]">
                     UX/UI Design
                   </h2>
                 </div>
@@ -188,7 +188,7 @@ function Service() {
 
                 {/* RIGHT : HEADING */}
                 <div className="flex items-start">
-                  <h2 className="text-[40px] md:text-[60px] lg:text-[62px] xl:text-[90px] 2xl:text-[110px] font-bold leading-[110%] text-[#181818]">
+                  <h2 className="text-[40px] md:text-[60px] lg:text-[62px] xl:text-[90px] 2xl:text-[110px] font-bold leading-[110%] text-[#181818] midxl:!text-[80px]">
                     Mobile Development
                   </h2>
                 </div>
@@ -241,7 +241,7 @@ function Service() {
 
                 {/* RIGHT : HEADING */}
                 <div className="flex items-start">
-                  <h2 className="text-[40px] md:text-[60px] lg:text-[62px] xl:text-[90px] 2xl:text-[110px] font-bold leading-[110%] text-[#181818]">
+                  <h2 className="text-[40px] md:text-[60px] lg:text-[62px] xl:text-[90px] 2xl:text-[110px] font-bold leading-[110%] text-[#181818] midxl:!text-[80px]">
                     Business Services
                   </h2>
                 </div>

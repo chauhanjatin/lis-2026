@@ -739,16 +739,16 @@ export default function Home() {
         </div> */}
 
         <div className="border-y border-[#18181833]">
-          <div className="mx-auto flex w-full flex-col items-start px-6 sm:px-10 lg:px-16 xl:flex-row xl:pr-0 xl:pl-40">
+          <div className="mx-auto flex w-full flex-col items-start px-6 sm:px-10 lg:px-16 xl:flex-row xl:pr-0 xl:pl-40 midxl:!pl-16 midxl:!pr-0">
             {/* LEFT CARD */}
-            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pr-[100px] flex-1">
-              <div className="inline-flex items-start gap-[20px] md:gap-[30px]">
-                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] md:gap-5">
-                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl leading-[36px] md:leading-[46px] xl:leading-[58px] text-[#181818]">
+            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pr-[100px] midxl:!h-auto midxl:!py-[80px] midxl:!pr-[40px] flex-1">
+              <div className="inline-flex items-start gap-[20px] md:gap-[30px] midxl:!gap-[20px] w-full">
+                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] midxl:!w-full md:gap-5">
+                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl midxl:!text-[36px] leading-[36px] md:leading-[46px] xl:leading-[58px] midxl:!leading-[46px] text-[#181818]">
                     Mobile App development
                   </h2>
 
-                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] leading-[26px] md:leading-[30px] xl:leading-[33px]">
+                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] midxl:!text-[18px] leading-[26px] md:leading-[30px] xl:leading-[33px] midxl:!leading-[30px]">
                     We design and develop high-performance Android, iOS, and
                     cross-platform apps using the latest technologies. Our apps
                     are optimized for speed, security, and seamless user
@@ -757,7 +757,7 @@ export default function Home() {
                 </div>
 
                 <img
-                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px]"
+                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0"
                   alt="Carose"
                   src={cardarrow}
                 />
@@ -765,14 +765,14 @@ export default function Home() {
             </div>
 
             {/* RIGHT CARD */}
-            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pl-[100px] xl:pr-[200px] flex-1 border-t xl:border-t-0 xl:border-l border-[#18181833]">
-              <div className="inline-flex items-start gap-[20px] md:gap-[30px]">
-                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] md:gap-5">
-                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl leading-[36px] md:leading-[46px] xl:leading-[58px] text-[#181818]">
+            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pl-[100px] xl:pr-[200px] midxl:!h-auto midxl:!py-[80px] midxl:!pl-[40px] midxl:!pr-[40px] flex-1 border-t xl:border-t-0 xl:border-l border-[#18181833]">
+              <div className="inline-flex items-start gap-[20px] md:gap-[30px] midxl:!gap-[20px] w-full">
+                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] midxl:!w-full md:gap-5">
+                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl midxl:!text-[36px] leading-[36px] md:leading-[46px] xl:leading-[58px] midxl:!leading-[46px] text-[#181818]">
                     Business Services & Consulting
                   </h2>
 
-                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] leading-[26px] md:leading-[30px] xl:leading-[33px]">
+                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] midxl:!text-[18px] leading-[26px] md:leading-[30px] xl:leading-[33px] midxl:!leading-[30px]">
                     We help companies identify growth opportunities, improve
                     workflows, automate operations, and build digital solutions
                     that support long-term scalability and success.
@@ -780,7 +780,7 @@ export default function Home() {
                 </div>
 
                 <img
-                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px]"
+                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0"
                   alt="Carose"
                   src={cardarrow}
                 />
@@ -788,15 +788,15 @@ export default function Home() {
             </div>
             
           </div>
-          <div className="mx-auto flex w-full flex-col items-start px-6 sm:px-10 lg:px-16 xl:flex-row xl:pr-0 xl:pl-40 border-t border-[#18181833]">
+          <div className="mx-auto flex w-full flex-col items-start px-6 sm:px-10 lg:px-16 xl:flex-row xl:pr-0 xl:pl-40 midxl:!pl-16 midxl:!pr-0 border-t border-[#18181833]">
             {/* LEFT CARD */}
-            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pr-[100px] flex-1">
-              <div className="inline-flex items-start gap-[20px] md:gap-[30px]">
-                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] md:gap-5">
-                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl leading-[36px] md:leading-[46px] xl:leading-[58px] text-[#181818]">
+            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pr-[100px] midxl:!h-auto midxl:!py-[80px] midxl:!pr-[40px] flex-1">
+              <div className="inline-flex items-start gap-[20px] md:gap-[30px] midxl:!gap-[20px] w-full">
+                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] midxl:!w-full md:gap-5">
+                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl midxl:!text-[36px] leading-[36px] md:leading-[46px] xl:leading-[58px] midxl:!leading-[46px] text-[#181818]">
                     Mobile App development
                   </h2>
-                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] leading-[26px] md:leading-[30px] xl:leading-[33px]">
+                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] midxl:!text-[18px] leading-[26px] md:leading-[30px] xl:leading-[33px] midxl:!leading-[30px]">
                     We design and develop high-performance Android, iOS, and
                     cross-platform apps using the latest technologies. Our apps
                     are optimized for speed, security, and seamless user
@@ -804,7 +804,7 @@ export default function Home() {
                   </p>
                 </div>
                 <img
-                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px]"
+                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0"
                   alt="Carose"
                   src={cardarrow}
                 />
@@ -812,14 +812,14 @@ export default function Home() {
             </div>
 
             {/* RIGHT CARD */}
-            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pl-[100px] xl:pr-[200px] flex-1 border-t xl:border-t-0 xl:border-l border-[#18181833]">
-              <div className="inline-flex items-start gap-[20px] md:gap-[30px]">
-                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] md:gap-5">
-                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl leading-[36px] md:leading-[46px] xl:leading-[58px] text-[#181818]">
+            <div className="flex min-h-[300px] items-center gap-[20px] py-[60px] md:py-[80px] xl:h-[402px] xl:py-[100px] xl:pl-[100px] xl:pr-[200px] midxl:!h-auto midxl:!py-[80px] midxl:!pl-[40px] midxl:!pr-[40px] flex-1 border-t xl:border-t-0 xl:border-l border-[#18181833]">
+              <div className="inline-flex items-start gap-[20px] md:gap-[30px] midxl:!gap-[20px] w-full">
+                <div className="flex flex-col w-full items-start gap-4 md:w-[480px] xl:w-[576px] midxl:!w-full md:gap-5">
+                  <h2 className="self-stretch font-semibold text-[28px] md:text-[36px] xl:text-5xl midxl:!text-[36px] leading-[36px] md:leading-[46px] xl:leading-[58px] midxl:!leading-[46px] text-[#181818]">
                     Business Services & Consulting
                   </h2>
 
-                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] leading-[26px] md:leading-[30px] xl:leading-[33px]">
+                  <p className="self-stretch font-normal text-[#181818] text-[16px] md:text-[18px] xl:text-[22px] midxl:!text-[18px] leading-[26px] md:leading-[30px] xl:leading-[33px] midxl:!leading-[30px]">
                     We help companies identify growth opportunities, improve
                     workflows, automate operations, and build digital solutions
                     that support long-term scalability and success.
@@ -827,7 +827,7 @@ export default function Home() {
                 </div>
 
                 <img
-                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px]"
+                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0"
                   alt="Carose"
                   src={cardarrow}
                 />
@@ -878,7 +878,7 @@ export default function Home() {
           <div className="Discover_items text-white">
             <div className="Discover_content">
               <span className="text-[40px]">[ 1 ]</span>
-              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none">
+              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none midxl:text-[100px]">
                 Discover
               </h2>
               <p className="max-w-[591px] text-[22px]">
@@ -898,7 +898,7 @@ export default function Home() {
 
             <div className="Discover_content">
               <span className="text-[40px]">[ 2 ]</span>
-              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none">
+              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none midxl:text-[100px]">
                 Design
               </h2>
               <p className="max-w-[591px] text-[22px]">
@@ -911,7 +911,7 @@ export default function Home() {
           <div className="Discover_items text-white">
             <div className="Discover_content">
               <span className="text-[40px]">[ 3 ]</span>
-              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none">Build</h2>
+              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none midxl:text-[100px]">Build</h2>
               <p className="max-w-[591px] text-[22px]">
                 We develop secure, scalable, and future-ready digital products
                 using clean code and industry best practices.
@@ -932,7 +932,7 @@ export default function Home() {
                 Your product is thoroughly tested and deployed with complete
                 support for maintenance and future updates.
               </p>
-              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none">
+              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none midxl:text-[100px]">
                 Deliver
               </h2>
               <span className="text-[40px]">[ 4 ]</span>
