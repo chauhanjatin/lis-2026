@@ -31,6 +31,7 @@ import arrowgreen from "../assets/arrow-green.png";
 import arrowred from "../assets/arrow-red.png";
 import arrowpink from "../assets/arrow-pink.png";
 import Footer from "./Footer";
+import viewgif from "../assets/card-viewgif.gif";
 
 const features = [
   {
@@ -123,49 +124,51 @@ function About() {
           className="relative bg-white overflow-hidden pt-16 md:pt-20 pb-20 md:pb-28 lg:pb-32"
         >
           <div className="containerX mx-auto">
-            <div className="items-center">
-              <div className="relative">
-                <h3 className="text-[14px] md:text-[16px] lg:text-[20px] mb-2 md:mb-3 font-light text-[#181818]">
-                  ABOUT US
-                </h3>
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
+              <div className="items-center w-full lg:w-[70%]">
+                <div className="relative">
+                  <h3 className="text-[14px] md:text-[16px] lg:text-[20px] mb-2 md:mb-3 font-light text-[#181818]">
+                    ABOUT US
+                  </h3>
 
-                <h1 className="text-[32px] sm:text-[42px] md:text-[40px] lg:text-[45px] xl:text-[60px] 2xl:text-[70px] font-semibold text-[#181818] leading-[120%] md:leading-[70px] lg:leading-[80px] xl:leading-[95px]">
-                  We Are{" "}
-                  <span className="bg-[#1EB2BE] text-white rounded-[6px] md:rounded-[8px] inline-block leading-none px-2 py-1">
-                    LIS
-                  </span>{" "}
-                  A Digital Design <br /> And Development Company
-                </h1>
+                  <h1 className="text-[32px] sm:text-[42px] md:text-[40px] lg:text-[45px] xl:text-[60px] 2xl:text-[70px] font-semibold text-[#181818] leading-[120%] md:leading-[70px] lg:leading-[80px] xl:leading-[95px]">
+                    We Are{" "}
+                    <span className="bg-[#1EB2BE] text-white rounded-[6px] md:rounded-[8px] inline-block leading-none px-2 py-1">
+                      LIS
+                    </span>{" "}
+                    A Digital Design <br /> And Development Company
+                  </h1>
 
-                <p className="md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] text-[#181818] my-[18px] lg:my-[25px] xl:my-[30px] leading-[26px] md:leading-[32px] lg:leading-[36px] font-normal">
-                  We create digital experiences that are simple, human-centered,
-                  and built for long-term success.
-                </p>
+                  <p className="md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] text-[#181818] my-[18px] lg:my-[25px] xl:my-[30px] leading-[26px] md:leading-[32px] lg:leading-[36px] font-normal">
+                    We create digital experiences that are simple,
+                    human-centered, and built for long-term success.
+                  </p>
 
-                <p className="text-[15px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] text-[#181818] leading-[26px] md:leading-[30px] lg:leading-[36px] font-normal lg:w-[814px] xl:w-[1088px] 2xl:w-[1338px]">
-                  LIS is a{" "}
-                  <b>
-                    UI/UX design, mobile app development, and custom software
-                    development company
-                  </b>{" "}
-                  helping brands transform ideas into high-value digital
-                  products. Our expert team of designers, developers, and
-                  strategists works with a shared mission - to build solutions
-                  that are meaningful, intuitive, and engineered for scale. From
-                  user-centered interfaces to modern web and mobile
-                  applications, we blend creativity with advanced technology to
-                  help businesses innovate, automate, and grow in today’s
-                  fast-changing digital world.
-                </p>
+                  <p className="text-[15px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] text-[#181818] leading-[26px] md:leading-[30px] lg:leading-[36px] font-normal ">
+                    LIS is a{" "}
+                    <b>
+                      UI/UX design, mobile app development, and custom software
+                      development company
+                    </b>{" "}
+                    helping brands transform ideas into high-value digital
+                    products. Our expert team of designers, developers, and
+                    strategists works with a shared mission - to build solutions
+                    that are meaningful, intuitive, and engineered for scale.
+                    From user-centered interfaces to modern web and mobile
+                    applications, we blend creativity with advanced technology
+                    to help businesses innovate, automate, and grow in today’s
+                    fast-changing digital world.
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <div className="absolute md:right-[-10%] xl:right-[-8%] 2xl:right-[-2%] bottom-[10%] md:bottom-[41%] lg:bottom-[48%] xl:bottom-[40%]">
-              <img
-                src={eyesGif}
-                alt="Hero section animation"
-                className="w-[160px] sm:w-[220px] md:w-[435px] lg:w-[475px] xl:w-[530px] h-auto object-contain"
-              />
+              <div className=" w-full lg:w-[30%]">
+                <img
+                  src={eyesGif}
+                  alt="Hero section animation"
+                  className="w-[160px] sm:w-[220px] md:w-[435px] lg:w-[475px] xl:w-[530px] h-auto object-contain"
+                />
+              </div>
             </div>
           </div>
 
@@ -177,8 +180,7 @@ function About() {
         <section className="relative bg-[#f7f7f7] py-36 overflow-hidden">
           <div className="containerX">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-20 items-start text-center md:text-left">
-               
-               {/* 10+ */}
+              {/* 10+ */}
               <div className="relative text-center">
                 <h3 className="text-[56px] font-bold text-black">10+</h3>
                 <p className="mt-4 text-[18px] text-black leading-relaxed">
@@ -257,7 +259,6 @@ function About() {
                   />
                 </div>
               </div>
-              
             </div>
           </div>
         </section>
@@ -286,7 +287,7 @@ function About() {
             }`}
           >
             <h1
-              className={`font-bold transition-all duration-700 leading-[1.1]
+              className={`font-bold transition-all duration-700 leading-[1.1] text-[#F1F2F4]
           ${shrink ? "text-[70px]" : "text-[160px]"}`}
             >
               Make It Simple
@@ -299,14 +300,22 @@ function About() {
           <div className="border-t border-[#2a2a2a]" />
 
           {/* CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 relative">
             {cards.map((item, index) => (
               <div
                 key={index}
                 className={`text-center px-[40px] py-[56px] lg:px-[45px] lg:py-[65px] 2xl:px-[60px] 2xl:py-[80px] border-[#2a2a2a]
             ${index !== 2 ? "md:border-r" : ""}`}
               >
-                <h3 className="text-[26px] lg:text-[30px] 2xl:text-[34px] font-semibold lg:mb-[25px] mb-[20px]">
+                <div className=" flex items-center justify-center ">
+                  <img
+                    src={viewgif}
+                    alt="view"
+                    className="lg:w-[150px] lg:h-[150px] xl:w-[165px] xl:h-[165px] 2xl:w-[140px] 2xl:h-[140px]"
+                  />
+                  <span className="absolute text-black text-[30px] font-medium"></span>
+                </div>
+                <h3 className="text-[26px] lg:text-[30px] 2xl:text-[34px] font-semibold lg:mb-[25px] mb-[20px] text-[#F1F2F4]">
                   {item.title}
                 </h3>
 
@@ -384,7 +393,6 @@ function About() {
                      rounded-[30px] md:rounded-[40px] relative overflow-hidden"
             >
               {/* Background Pattern */}
-            
 
               {/* Text */}
               <p
@@ -406,10 +414,11 @@ function About() {
                           bg-[#ffffff21] border border-white 
                           shadow-[0px_4px_20px_#0000000d] 
                           px-[26px] py-[16px] md:px-[28px] md:py-[16px] lg:px-[30px] lg:py-[20px] 
-                          rounded-[100px] hover:bg-[#ffffff31] transition">
-                     <span className="text-[#0b0c10] font-normal text-[14px] lg:text-[16px] xl:text-[18px] whitespace-nowrap">
-                       Start a Conversation
-                     </span>
+                          rounded-[100px] hover:bg-[#ffffff31] transition"
+              >
+                <span className="text-[#0b0c10] font-normal text-[14px] lg:text-[16px] xl:text-[18px] whitespace-nowrap">
+                  Start a Conversation
+                </span>
                 <img src={contactbtnarrow} alt="" className="w-4 md:w-5" />
               </button>
 
@@ -418,9 +427,9 @@ function About() {
                 <img
                   src={ctagif}
                   alt=""
-                  className="w-[120px] md:w-[160px] lg:w-[175px] xl:w-[209px]"/>
+                  className="w-[120px] md:w-[160px] lg:w-[175px] xl:w-[209px]"
+                />
               </div>
-
             </div>
           </div>
         </section>
@@ -478,7 +487,8 @@ function About() {
         {/* Feedbacks */}
         <section
           id="testimonials"
-          className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative">
+          className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative"
+        >
           <div className="mx-auto">
             {/* Heading */}
             <h2 className="containerX mx-auto text-[36px] sm:text-[50px] md:text-[50px] lg:text-[60px] font-bold text-[#1C1C1C] mb-12 md:mb-16 lg:mb-20 text-center leading-[120%]">
@@ -561,11 +571,9 @@ function About() {
                   →
                 </button>
               </div>
-
             </div>
           </div>
         </section>
-
       </div>
 
       <Footer />

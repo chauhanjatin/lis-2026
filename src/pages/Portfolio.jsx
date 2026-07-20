@@ -97,6 +97,8 @@ function Portfolio() {
       {/* Hero Section */}
       <section className="relative bg-white overflow-hidden pt-20 pb-16 xl:pb-32">
         <div className="containerX mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
+        <div className="items-center w-full lg:w-[70%]">
           <h3 className="text-[20px] mb-3 font-light text-[#181818]">
             PORTFOLIO
           </h3>
@@ -115,14 +117,16 @@ function Portfolio() {
             designers, developers, and digital strategists collaborates to build
             impactful digital products.
           </p>
+          </div>
 
-          <div className="absolute right-[-2%] bottom-[25%] lg:bottom-[21%] 2xl:bottom-[10%]">
+          <div className=" w-full lg:w-[30%]">
             <img
               src={portfoliogif}
               alt=""
               className="w-[18rem] lg:w-[21rem] xl:w-[23rem] 2xl:w-[32rem]"
             />
           </div>
+        </div>
         </div>
       </section>
 

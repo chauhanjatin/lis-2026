@@ -85,8 +85,8 @@ export default function Navbar() {
         <nav
           className={`flex items-center justify-between py-2 px-3 rounded-full transition-all duration-300 ps-4  ${
             scrolled
-              ? "border border-[#e5e7eb] bg-white"
-              : "border-[1px] border-transparent bg-transparent"
+              ? " bg-[#ffffff99]"
+              : "bg-transparent"
           }`}
         >
           <Link to="/" className="flex items-center">

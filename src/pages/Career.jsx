@@ -19,7 +19,8 @@ function Career() {
       {/* Hero Section */}
       <section className="relative bg-white overflow-hidden pt-20 pb-20 2xl:pb-32">
         <div className="containerX mx-auto">
-          <div className="items-center">
+         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
+         <div className="items-center w-full lg:w-[70%]">
             <div className="relative">
               <h3 className="text-[16px] md:text-[18px] lg:text-[20px] mb-3 font-light text-[#181818]">
                 CAREER
@@ -39,13 +40,14 @@ function Career() {
             </div>
           </div>
 
-          <div className="absolute right-[4%] bottom-[28%] lg:right-[4%] lg:bottom-[25%] 2xl:right-[6%] 2xl:bottom-[12%]">
+          <div className=" w-full lg:w-[30%]">
             <img
               src={careergif}
               alt="Hero section animation"
               className="h-auto 2xl:w-[32rem] lg:w-[25rem] w-[20rem] object-contain"
             />
           </div>
+         </div>
         </div>
 
         <div className="absolute top-0 left-0 w-64 h-64 bg-gray-300 opacity-10 rounded-full blur-3xl"></div>

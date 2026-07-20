@@ -13,7 +13,8 @@ function Contactus() {
       {/* Hero Section */}
       <section className="relative bg-white overflow-hidden pt-20 pb-32">
         <div className="containerX mx-auto">
-          <div className="items-center">
+         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
+         <div className="items-center w-full lg:w-[70%]">
             <div className="relative ">
               <h3 className="text-[20px] mb-3 font-light text-[#181818]">
                 CONTACT US
@@ -31,7 +32,7 @@ function Contactus() {
                   UI/UX design, website development, mobile apps, or complete
                   end-to-end digital product solutions,
                 </b>{" "}
-                our team is here to help. Share your project details using the
+                our team is here  to help. Share your project details using the
                 form, and we’ll get back to you shortly with the next steps.
               </p>
             </div>
@@ -39,18 +40,14 @@ function Contactus() {
 
           <div
             className="relative 
-                   sm:relative md:absolute 
-                   right-[5%] xl:right-[4%] 2xl:right-[6%] 
-                   mt-10 md:mt-0 
-                   bottom-[40%] xl:bottom-[40%] 2xl:bottom-[25%] 
-                   flex justify-center md:block xl:"
-          >
+                   w-full lg:w-[30%]">
             <img
               src={contactusgif}
               alt="Hero section animation"
               className="w-[200px] md:w-[250px] lg:w-[275px] xl:w-[350px] 
             2xl:w-[435px] h-auto object-contain"
             />
+         </div>
           </div>
         </div>
 

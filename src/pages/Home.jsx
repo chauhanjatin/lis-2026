@@ -480,60 +480,62 @@ export default function Home() {
       <div className="w-full">
         <section
           id="home"
-          className="relative bg-white overflow-hidden pt-16 md:pt-20 pb-20 md:pb-32 lg:pb-24">
+          className="relative bg-white overflow-hidden pt-16 md:pt-20 pb-20 md:pb-32 lg:pb-24"
+        >
           <div className="containerX mx-auto">
-            <div className="items-center">
-              <div className="relative">
-                {/* HEADING */}
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
+              <div className="w-full lg:w-[70%]">
+                <div className="relative">
+                  {/* HEADING */}
 
-                <h1 className="text-[34px] sm:text-[40px] md:text-[60px] lg:text-[80px] midxl:!text-[60px] font-semibold text-[#181818] leading-[42px] sm:leading-[52px] md:leading-[80px] lg:leading-[120px] midxl:!leading-[80px] mb-[30px]">
-                  <div className="border border-[#828282] rounded-full me-3 w-[177px] h-[94px] inline-flex overflow-hidden relative top-4">
-                    <img
-                      src={upworkgif}
-                      alt="upwork"
-                      className="w-full h-full object-cover"
-                    />
+                  <h1 className="text-[34px] sm:text-[40px] md:text-[60px] lg:text-[60px] midxl:!text-[60px] font-semibold text-[#181818] leading-[42px] sm:leading-[52px] md:leading-[80px] lg:leading-[120px] midxl:!leading-[80px] mb-[30px]">
+                    <div className="border border-[#828282] rounded-full me-3 w-[177px] h-[94px] inline-flex overflow-hidden relative top-4">
+                      <img
+                        src={upworkgif}
+                        alt="upwork"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    Custom Software & Product <br className="hidden md:block" />
+                    Development - Web, Mobile & UI/UX
+                  </h1>
+
+                  {/* PARAGRAPH */}
+                  <p className="text-[16px] sm:text-[18px] md:text-[22px] lg:text-[24px] text-[#181818] mb-[40px] md:mb-[60px] leading-[26px] sm:leading-[30px] md:leading-[36px] font-normal">
+                    We build scalable websites, mobile applications, and
+                    software solutions that transform your business vision into
+                    powerful digital
+                    <br className="hidden lg:block" /> products. Partner with
+                    our expert team to innovate faster, deliver smarter, and
+                    grow with confidence.
+                  </p>
+
+                  {/* BUTTONS */}
+                  <div className="flex flex-wrap items-center gap-4">
+                    <button className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-[#2a9df4] to-[#2bc0e4] border border-cyan-400 text-[#181818] text-[16px] md:text-[18px] rounded-full font-semibold hover:bg-cyan-50 transition">
+                      <span>Start Your Project</span>
+                      <ArrowRight className="w-5 h-5 text-[#181818]" />
+                    </button>
+
+                    <a
+                      href="#contact"
+                      className="text-[#2a9df4] text-[16px] md:text-[18px] font-semibold hover:text-cyan-600 transition"
+                    >
+                      Book a Free Consultation
+                    </a>
                   </div>
-                  Custom Software & Product <br className="hidden md:block" />
-                  Development - Web, Mobile & UI/UX
-                </h1>
-
-                {/* PARAGRAPH */}
-                <p className="text-[16px] sm:text-[18px] md:text-[22px] lg:text-[24px] text-[#181818] mb-[40px] md:mb-[60px] leading-[26px] sm:leading-[30px] md:leading-[36px] font-normal">
-                  We build scalable websites, mobile applications, and software
-                  solutions that transform your business vision into powerful
-                  digital
-                  <br className="hidden lg:block" /> products. Partner with our
-                  expert team to innovate faster, deliver smarter, and grow with
-                  confidence.
-                </p>
-
-                {/* BUTTONS */}
-                <div className="flex flex-wrap items-center gap-4">
-                  <button className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-[#2a9df4] to-[#2bc0e4] border border-cyan-400 text-[#181818] text-[16px] md:text-[18px] rounded-full font-semibold hover:bg-cyan-50 transition">
-                    <span>Start Your Project</span>
-                    <ArrowRight className="w-5 h-5 text-[#181818]" />
-                  </button>
-
-                  <a
-                    href="#contact"
-                    className="text-[#2a9df4] text-[16px] md:text-[18px] font-semibold hover:text-cyan-600 transition"
-                  >
-                    Book a Free Consultation
-                  </a>
+                  
                 </div>
               </div>
-            </div>
 
-            {/* HERO IMAGE */}
-            <div className="absolute lg:right-[-5%] right-[-10%] bottom-[55%] md:bottom-[60%] lg:bottom-[63%] w-[180px] sm:w-[240px] md:w-[300px] lg:w-auto">
-              <img
-                src={heroGif}
-                alt="Hero section animation"
-                className="w-full h-auto max-w-lg object-contain"
-              />
+              <div className="w-full lg:w-[30%] flex justify-center lg:justify-end">
+                <img
+                  src={heroGif}
+                  alt="Hero section animation"
+                  className="w-full h-auto max-w-lg object-contain"
+                />
+              </div>
             </div>
-
           </div>
 
           {/* MARQUEE */}
@@ -555,14 +557,12 @@ export default function Home() {
             </button>
           </div>
 
-          
-
           {/* BACKGROUND BLUR SHAPES */}
           {/* <div className="absolute top-0 left-0 w-40 md:w-64 h-40 md:h-64 bg-gray-300 opacity-10 rounded-full blur-3xl"></div> */}
           {/* <div className="absolute bottom-0 right-0 w-60 md:w-96 h-60 md:h-96 bg-gray-300 opacity-10 rounded-full blur-3xl"></div> */}
         </section>
 
-        <section className="bg-white py-12 md:py-16 lg:py-20">  
+        <section className="bg-white py-12 md:py-16 lg:py-20">
           <div className="containerX mx-auto">
             {/* HEADING */}
             <h2 className="text-[28px] sm:text-[36px] md:text-[50px] lg:text-[65px] font-semibold text-[#181818] mb-[30px] md:mb-[40px] lg:mb-[50px] leading-[40px] sm:leading-[50px] md:leading-[65px] lg:leading-[80px]">
@@ -583,8 +583,10 @@ export default function Home() {
                   className="w-[70px] h-[96px] object-cover"
                 />
                 <img
-                  src={everyanimation}   
-                  alt="" className="w-[70px] h-[96px] object-cover"/>
+                  src={everyanimation}
+                  alt=""
+                  className="w-[70px] h-[96px] object-cover"
+                />
               </div>
               Every idea deserves precision. Every product deserves impact. Most
               agencies deliver code. We craft experiences. At LIS, we blend
@@ -635,8 +637,7 @@ export default function Home() {
         <section className="relative bg-[#f7f7f7] py-36 overflow-hidden">
           <div className="containerX">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-20 items-start text-center md:text-left">
-               
-               {/* 10+ */}
+              {/* 10+ */}
               <div className="relative text-center">
                 <h3 className="text-[56px] font-bold text-black">10+</h3>
                 <p className="mt-4 text-[18px] text-black leading-relaxed">
@@ -656,7 +657,7 @@ export default function Home() {
               </div>
 
               {/* 55+ */}
-              <div className="relative text-center top-[30px]">
+              <div className="relative text-center ">
                 <h3 className="text-[56px] font-bold text-black">55+</h3>
                 <p className="mt-4 text-[18px] text-black leading-relaxed">
                   Successful <br /> Projects
@@ -676,7 +677,7 @@ export default function Home() {
               </div>
 
               {/* 27+ */}
-              <div className="relative text-center top-[60px]">
+              <div className="relative text-center ">
                 <h3 className="text-[56px] font-bold text-black">27+</h3>
                 <p className="mt-4 text-[18px] text-black leading-relaxed">
                   Happy <br />
@@ -697,7 +698,7 @@ export default function Home() {
               </div>
 
               {/* 15+ */}
-              <div className="relative text-center top-[90px]">
+              <div className="relative text-center ">
                 <h3 className="text-[56px] font-bold text-black">15+</h3>
                 <p className="mt-4 text-[18px] text-black leading-relaxed">
                   Expert Developers <br /> & Designers
@@ -715,7 +716,6 @@ export default function Home() {
                   />
                 </div>
               </div>
-              
             </div>
           </div>
         </section>
@@ -786,7 +786,6 @@ export default function Home() {
                 />
               </div>
             </div>
-            
           </div>
           <div className="mx-auto flex w-full flex-col items-start px-6 sm:px-10 lg:px-16 xl:flex-row xl:pr-0 xl:pl-40 midxl:!pl-16 midxl:!pr-0 border-t border-[#18181833]">
             {/* LEFT CARD */}
@@ -833,7 +832,6 @@ export default function Home() {
                 />
               </div>
             </div>
-            
           </div>
         </div>
 
@@ -911,7 +909,9 @@ export default function Home() {
           <div className="Discover_items text-white">
             <div className="Discover_content">
               <span className="text-[40px]">[ 3 ]</span>
-              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none midxl:text-[100px]">Build</h2>
+              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none midxl:text-[100px]">
+                Build
+              </h2>
               <p className="max-w-[591px] text-[22px]">
                 We develop secure, scalable, and future-ready digital products
                 using clean code and industry best practices.
@@ -945,7 +945,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 border-b border-gray-200">
             {/* LEFT SIDE */}
             <div className="flex flex-col justify-between lg:border-r border-gray-200 pb-10 lg:pb-0">
-              <div> 
+              <div>
                 <h2 className="text-[36px] sm:text-[48px] md:text-[60px] lg:text-[80px] font-bold leading-[110%] text-[#181818]">
                   Our <br /> Key Features
                 </h2>
@@ -1033,7 +1033,7 @@ export default function Home() {
         {/* Tools */}
         <section className="relative w-full bg-[#181818] py-12 md:py-16 lg:py-20 overflow-hidden  ">
           <div className="relative">
-            <h2 className="font-bold text-white text-[36px] sm:text-[50px] md:text-[65px] lg:text-[80px] text-center tracking-[1.2px] md:tracking-[1.4px] lg:tracking-[1.60px] leading-[120%] mb-12 md:mb-16 lg:mb-20">
+            <h2 className="font-bold text-[#F1F2F4] text-[36px] sm:text-[50px] md:text-[65px] lg:text-[80px] text-center tracking-[1.2px] md:tracking-[1.4px] lg:tracking-[1.60px] leading-[120%] mb-12 md:mb-16 lg:mb-20">
               Tools We Use To
               <br />
               Create Your Products
@@ -1128,7 +1128,10 @@ export default function Home() {
         </section>
 
         {/* Feedbacks */}
-        <section id="testimonials" className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative">
+        <section
+          id="testimonials"
+          className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative"
+        >
           <div className="mx-auto">
             {/* Heading */}
             <h2 className="containerX mx-auto text-[36px] sm:text-[50px] md:text-[65px] lg:text-[80px] font-bold text-[#1C1C1C] mb-12 md:mb-16 lg:mb-20 text-center leading-[120%]">
@@ -1216,7 +1219,6 @@ export default function Home() {
                   →
                 </button>
               </div>
-
             </div>
           </div>
         </section>

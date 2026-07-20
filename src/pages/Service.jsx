@@ -21,7 +21,8 @@ function Service() {
           className="relative bg-white overflow-hidden pt-16 md:pt-20 pb-20 lg:pb-14 xl:pb-28"
         >
           <div className="containerX mx-auto">
-            <div className="items-center">
+            <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
+            <div className="items-center w-full lg:w-[70%]">
               <div className="relative">
                 <h3 className="text-[16px] md:text-[18px] lg:text-[20px] mb-3 font-light text-[#181818]">
                   SERVICES
@@ -32,17 +33,17 @@ function Service() {
                   <span className="bg-[#1EB2BE] text-white rounded-[8px] inline-block leading-none px-3 py-2 md:p-3">
                     Developing
                   </span>{" "}
-                  Custom <br className="hidden sm:block" /> Software
+                  Custom  Software
                 </h1>
 
-                <p className="md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] text-[#181818] my-[20px] lg:my-[25px] xl:my-[30px] leading-[160%] w-[690px] xl:w-[915px] 2xl:w-[1211px]">
+                <p className="md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] text-[#181818] my-[20px] lg:my-[25px] xl:my-[30px] leading-[160%] ">
                   Let us take care of the technology while you focus on growth.
                   As a full-service <b>custom software development company</b>,
                   we turn your ideas into scalable digital products built with
                   precision, innovation, and long-term reliability.
                 </p>
 
-                <p className="md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] text-[#181818] leading-[160%] w-[690px] xl:w-[915px] 2xl:w-[1211px]">
+                <p className="md:text-[16px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] text-[#181818] leading-[160%] ">
                   Whether you need{" "}
                   <b>
                     UI/UX design, high-performance websites, mobile apps, or
@@ -55,12 +56,13 @@ function Service() {
             </div>
 
             {/* Right GIF */}
-            <div className="absolute right-[1%] 2xl:right-[3%] bottom-[45%] lg:bottom-[35%] xl:bottom-[35%] 2xl:bottom-[32%]">
+            <div className=" w-full lg:w-[30%]">
               <img
                 src={servicesgif}
                 alt="Hero section animation"
                 className="h-auto w-[200px] lg:w-[255px] xl:w-[315px] 2xl:w-[400px] object-contain"
               />
+            </div>
             </div>
           </div>
 

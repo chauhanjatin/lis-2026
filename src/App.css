@@ -134,11 +134,11 @@ html {
   align-items: center;
   gap: 40px;
   min-width: 200%;
-  animation: scroll 25s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 
 .marquee.reverse {
-  animation: scrollReverse 25s linear infinite;
+  animation: scrollReverse 35s linear infinite;
 }
 
 .marquee > * {
