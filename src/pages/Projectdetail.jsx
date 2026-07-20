@@ -43,7 +43,7 @@ function Projectdetail() {
       <section className="containerX mx-auto mt-[90px] mb-[200px]">
         <div className="relative">
           <div className="mt-[100px]">
-            <h1 className="text-[42px] lg:text-[90px] font-bold leading-[130px]">
+            <h1 className="text-[42px] lg:text-[90px] font-bold leading-[130px] midxl:!text-[70px] midxl:!leading-[90px]">
               UniqLearn – AI- <br />
               Powered E-Learning <br />& LMS Platform
             </h1>
