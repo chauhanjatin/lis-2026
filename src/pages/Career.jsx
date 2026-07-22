@@ -3,10 +3,8 @@ import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import careergif from "../assets/career-gif.gif";
-import contactbtnarrow from "../assets/contactbtn-arrow.svg";
-import ctagif from "../assets/cta-gif.gif";
-import ctabggif from "../assets/ctabg-gif.gif";
 import data from "../data/projects.json";
+import CTA from "./CTA";
 
 function Career() {
   const { slug } = useParams();
@@ -76,32 +74,7 @@ function Career() {
         </p>
       </section>
 
-      {/* CTA */}
-      <section className="mt-[60px] mb-[130px]">
-        <div className="containerX mx-auto">
-          <div className="flex items-center justify-between p-[66px] lg:p-[70px] 2xl:p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[40px] relative overflow-hidden">
-          
-            <p className="relative text-black text-[26px] lg:text-[30px] 2xl:text-[60px] font-bold midxl:!text-[50px]">
-              No openings? Send your{" "}
-              <span className="text-white font-semibold italic">CV</span> —
-              we’ll <br /> contact you when something opens.
-            </p>
-            <button className="relative flex gap-2.5 bg-[#ffffff21] border border-solid border-[#ffffff] shadow-[0px_4px_20px_#0000000d] px-[30px] py-[20px] xl:px-[40px] xl:py-[26px] rounded-[100px] hover:bg-[#ffffff31]">
-              <span className="text-[#0b0c10] [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[16px] xl:text-[18px] text-center tracking-[0] leading-6 whitespace-nowrap">
-                Send Your CV
-              </span>
-              <img src={contactbtnarrow} alt="" />
-            </button>
-            <div className="absolute right-[5%] bottom-[-28%] lg:right-[4%] lg:bottom-[-21%] 2xl:right-[5%] 2xl:bottom-[4%] z-10">
-              <img
-                src={ctagif}
-                alt=""
-                className="w-[200px] h-[200px] 2xl:w-[209px] 2xl:h-[209px]"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTA/>
 
       <Footer />
     </div>

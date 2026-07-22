@@ -5,10 +5,8 @@ import figmalink from "../assets/figma-link.png";
 import visitlinkicon from "../assets/visit-linkicon.svg";
 import uniqlearn from "../assets/uniqlearn/uniqlearn-heroimg.png";
 import starimg from "../assets/star-listimg.svg";
-import contactbtnarrow from "../assets/contactbtn-arrow.svg";
-import ctagif from "../assets/cta-gif.gif";
-import ctabggif from "../assets/ctabg-gif.gif";
 import Footer from "./Footer";
+import CTA from "./CTA";
 
 const navigationButtons = [
   {
@@ -304,28 +302,7 @@ function Projectdetail() {
 
       {/* Marquee */}
 
-      {/* CTA */}
-      <section className="mt-[60px] mb-[130px]">
-        <div className="containerX mx-auto">
-          <div className="flex items-center justify-between p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[40px] relative overflow-hidden">
-           
-            <p className="relative  text-black text-[60px] font-bold">
-              Bring your{" "}
-              <span className="text-white font-semibold italic">vision </span>
-              — we’ll build <br /> the product.
-            </p>
-            <button className="relative  flex gap-2.5 bg-[#ffffff21] border border-solid border-[#ffffff] shadow-[0px_4px_20px_#0000000d] px-[40px] py-[26px] rounded-[100px] hover:bg-[#ffffff31]">
-              <span className="text-[#0b0c10] [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[18px] text-center tracking-[0] leading-6 whitespace-nowrap">
-                Work WIth LIS
-              </span>
-              <img src={contactbtnarrow} alt="" />
-            </button>
-            <div className="absolute right-[6%] bottom-[4%] z-10">
-              <img src={ctagif} alt="" className="w-[209px] h-[209px]" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTA/>
 
       <Footer />
     </div>

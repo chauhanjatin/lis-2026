@@ -5,11 +5,9 @@ import casestudygif from "../assets/cashstudy-gif.gif";
 import casestudyimg1 from "../assets/casestudy-img1.png";
 import casestudyimg2 from "../assets/casestudy-img2.png";
 import casestudyimg3 from "../assets/casestudy-img3.png";
-import contactbtnarrow from "../assets/contactbtn-arrow.svg";
-import ctagif from "../assets/cta-gif.gif";
-import ctabggif from "../assets/ctabg-gif.gif";
 import viewgif from "../assets/card-viewgif.gif";
 import Footer from "./Footer";
+import CTA from "./CTA";
 
 function Cashstudy() {
   return (
@@ -20,7 +18,7 @@ function Cashstudy() {
       <section className="relative bg-white overflow-hidden pt-20 xl:pb-20 2xl:pb-32">
         <div className="containerX mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
-         <div className="items-center w-full lg:w-[70%]">
+          <div className="items-center w-full lg:w-[70%]">
             <div className="relative">
               <h3 className="text-[16px] md:text-[18px] lg:text-[20px] mb-3 font-light text-[#181818]">
                 CASE STUDIES
@@ -49,7 +47,8 @@ function Cashstudy() {
               alt="Hero section animation"
               className="h-auto 2xl:w-[32rem] xl:w-[26rem] lg:w-[24rem] md:w-[20rem] object-contain grayscale"
             />
-          </div>  </div>     
+          </div>
+            </div>     
         </div>
 
         <div className="absolute top-0 left-0 w-64 h-64 bg-gray-300 opacity-10 rounded-full blur-3xl"></div>
@@ -164,32 +163,7 @@ function Cashstudy() {
         </div>
       </div>
 
-      {/* CTA */}
-      <section className="my-[130px]">
-        <div className="containerX mx-auto">
-          <div className="flex items-center justify-between p-[65px] lg:p-[72px] 2xl:p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[40px] relative overflow-hidden">
-           
-            <p className="relative z-10 text-black text-[28px] lg:text-[32px] xl:text-[45px] 2xl:text-[60px] font-bold midxl:!text-[50px]">
-              Your success{" "}
-              <span className="text-white font-semibold italic">story</span> can
-              be the next <br /> one we showcase.
-            </p>
-            <button className="relative z-10 flex gap-2.5 bg-[#ffffff21] border border-solid border-[#ffffff] shadow-[0px_4px_20px_#0000000d] px-[30px] py-[20px] xl:px-[40px] xl:py-[26px] rounded-[100px] hover:bg-[#ffffff31]">
-              <span className="text-[#0b0c10] [font-family:'Segoe_UI-Regular',Helvetica] font-normal text-[16px] xl:text-[18px] text-center tracking-[0] leading-6 whitespace-nowrap">
-                Build With Us
-              </span>
-              <img src={contactbtnarrow} alt="" />
-            </button>
-            <div className="absolute right-[4%] bottom-[-20%] xl:right-[5%] xl:bottom-[-9%] 2xl:right-[5%] 2xl:bottom-[4%] z-10">
-              <img
-                src={ctagif}
-                alt=""
-                className="w-[120px] md:w-[170px] lg:w-[209px]"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTA/>
 
       {/* Footer */}
       <Footer />

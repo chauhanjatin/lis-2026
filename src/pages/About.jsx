@@ -15,10 +15,8 @@ import marquee8 from "../assets/marquee8.png";
 import marquee9 from "../assets/marquee9.png";
 import marquee10 from "../assets/marquee10.png";
 import marquee11 from "../assets/marquee11.png";
-import contactbtnarrow from "../assets/contactbtn-arrow.svg";
-import ctagif from "../assets/cta-gif.gif";
-import ctabggif from "../assets/ctabg-gif.gif";
 import commitment from "../assets/commitment.svg";
+import CTA from "./CTA";
 import clarity from "../assets/clarity.svg";
 import excellence from "../assets/excellence.svg";
 import passion from "../assets/passion.svg";
@@ -31,6 +29,7 @@ import arrowgreen from "../assets/arrow-green.png";
 import arrowred from "../assets/arrow-red.png";
 import arrowpink from "../assets/arrow-pink.png";
 import Footer from "./Footer";
+import { FaBullseye, FaEye, FaAward } from "react-icons/fa";
 import viewgif from "../assets/card-viewgif.gif";
 
 const features = [
@@ -78,14 +77,17 @@ function About() {
 
   const cards = [
     {
+      icon: FaBullseye,
       title: "Our Mission",
       desc: "To simplify technology and empower businesses through modern, user-focused digital solutions. We aim to help companies grow faster by adopting innovation, not waiting for it.",
     },
     {
+      icon: FaEye,
       title: "Our Vision",
       desc: "To become a global leader in digital design and software development—known for creating intuitive products and delivering exceptional value to clients around the world.",
     },
     {
+      icon: FaAward,
       title: "Quality Management",
       desc: "We follow a strict, quality-driven development process. Every product is built with precision, tested for reliability, and aligned with industry standards to ensure top-tier performance, security, and long-term stability.",
     },
@@ -305,25 +307,26 @@ function About() {
               <div
                 key={index}
                 className={`text-center px-[40px] py-[56px] lg:px-[45px] lg:py-[65px] 2xl:px-[60px] 2xl:py-[80px] border-[#2a2a2a]
-            ${index !== 2 ? "md:border-r" : ""}`}
-              >
-                <div className=" flex items-center justify-center ">
-                  <img
-                    src={viewgif}
-                    alt="view"
-                    className="lg:w-[150px] lg:h-[150px] xl:w-[165px] xl:h-[165px] 2xl:w-[140px] 2xl:h-[140px]"
-                  />
-                  <span className="absolute text-black text-[30px] font-medium"></span>
+            ${index !== 2 ? "md:border-r" : ""}`}>
+                <div className="flex items-center justify-center mb-[20px] lg:mb-[25px]">
+                  <div className="relative w-[110px] h-[110px] md:w-[120px] md:h-[120px] lg:w-[150px] lg:h-[150px] xl:w-[165px] xl:h-[165px] 2xl:w-[140px] 2xl:h-[140px] flex items-center justify-center">
+                    <img
+                      src={viewgif}
+                      alt=""
+                      className="absolute inset-0 w-full h-full object-contain"
+                    />
+                    <item.icon className="relative z-10 text-[#111111] text-[34px] lg:text-[40px] 2xl:text-[42px]" />
+                  </div>
                 </div>
                 <h3 className="text-[26px] lg:text-[30px] 2xl:text-[34px] font-semibold lg:mb-[25px] mb-[20px] text-[#F1F2F4]">
-                  {item.title}
+                  {item.title}  
                 </h3>
 
                 <p className="text-[#a0a0a0] text-[16px] 2xl:text-[18px] leading-[32px]">
                   {item.desc}
                 </p>
               </div>
-            ))}
+            ))} 
           </div>
         </section>
 
@@ -382,57 +385,7 @@ function About() {
           </div>
         </div>
 
-        {/* CTA */}
-        <section className="mt-[40px] md:mt-[60px] mb-[30px]">
-          <div className="containerX mx-auto">
-            <div
-              className="flex lg:flex-row items-center justify-between 
-                     gap-8 p-[40px] md:p-[55px] lg:[76px] xl:p-[85px]
-                     2xl:p-[100px] 
-                     bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] 
-                     rounded-[30px] md:rounded-[40px] relative overflow-hidden"
-            >
-              {/* Background Pattern */}
-
-              {/* Text */}
-              <p
-                className="relative z-10 text-black 
-                 text-[28px] sm:text-[36px] md:text-[29px] lg:text-[32px] xl:text-[42px] 2xl:text-[60px] 
-                 font-bold 2xl:leading-[90px]"
-              >
-                Ready to{" "}
-                <span className="text-white font-semibold italic">
-                  collaborate
-                </span>{" "}
-                with a <br className="hidden sm:block" /> trusted, experienced
-                tech team?
-              </p>
-
-              {/* Button */}
-              <button
-                className="relative z-10 flex items-center gap-3 
-                          bg-[#ffffff21] border border-white 
-                          shadow-[0px_4px_20px_#0000000d] 
-                          px-[26px] py-[16px] md:px-[28px] md:py-[16px] lg:px-[30px] lg:py-[20px] 
-                          rounded-[100px] hover:bg-[#ffffff31] transition"
-              >
-                <span className="text-[#0b0c10] font-normal text-[14px] lg:text-[16px] xl:text-[18px] whitespace-nowrap">
-                  Start a Conversation
-                </span>
-                <img src={contactbtnarrow} alt="" className="w-4 md:w-5" />
-              </button>
-
-              {/* Decorative GIF */}
-              <div className="absolute md:right-[9%] md:bottom-[-16%] lg:right-[7%] lg:bottom-[-20%] xl:right-[8%] xl:bottom-[-8%] 2xl:bottom-[4%]  2xl:right-[7%] z-10 hidden md:block">
-                <img
-                  src={ctagif}
-                  alt=""
-                  className="w-[120px] md:w-[160px] lg:w-[175px] xl:w-[209px]"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        <CTA/>    
 
         {/* Our Core Values */}
         <section className="containerX mx-auto bg-white py-12 md:py-16 lg:py-20">
@@ -484,7 +437,7 @@ function About() {
           </div>
         </section>
 
-        {/* Feedbacks */}
+        {/* Feedbacks */}       
         <section
           id="testimonials"
           className="bg-[#F5F5F5] py-14 md:py-20 lg:py-24 overflow-hidden relative"
@@ -497,16 +450,13 @@ function About() {
             {/* Slider Wrapper */}
             <div className="relative">
               {/* Cards Row */}
-              <div
-                ref={sliderRef}
-                className="flex gap-5 md:gap-6 lg:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar px-[16px] sm:px-[24px] md:px-[40px] lg:px-[80px] xl:px-[120px] 2xl:px-[200px] mt-10"
-              >
+              <div ref={sliderRef}
+                className="flex gap-5 md:gap-6 lg:gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar px-[16px] sm:px-[24px] md:px-[40px] lg:px-[80px] xl:px-[120px] 2xl:px-[200px] mt-10">
                 {[1, 2, 3, 4, 5, 6].map((item, index) => (
                   <div
                     key={index}
                     data-feedback-card
-                    className="snap-start shrink-0 w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] xl:w-[500px] bg-white rounded-[20px] md:rounded-[28px] p-5 sm:p-6 md:p-8 flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-[#ECECEC]"
-                  >
+                    className="snap-start shrink-0 w-[280px] sm:w-[340px] md:w-[400px] lg:w-[460px] xl:w-[500px] bg-white rounded-[20px] md:rounded-[28px] p-5 sm:p-6 md:p-8 flex flex-col shadow-[0_4px_24px_rgba(0,0,0,0.04)] border border-[#ECECEC]">
                     {/* Top */}
                     <div className="flex items-start justify-between gap-3">
                       <div className="flex items-center gap-3 md:gap-4 min-w-0">
@@ -571,6 +521,7 @@ function About() {
                   →
                 </button>
               </div>
+              
             </div>
           </div>
         </section>

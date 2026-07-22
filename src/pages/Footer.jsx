@@ -19,7 +19,7 @@ const helpLinks = [
 ];
 
 const contactInfo = [
-  {
+  { 
     icon: callfooter,
     title: "Phone",
     content: "+91 70963 64801",
@@ -39,8 +39,8 @@ const contactInfo = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#181818]">
-      <div className="containerX mx-auto relative flex flex-col items-center gap-10 pt-16 md:pt-20 pb-[40px] md:pb-[50px]">
+    <footer className="bg-[#181818] relative overflow-hidden">
+      <div className="containerX mx-auto relative flex flex-col items-center gap-10 pt-16 md:pt-20 pb-[40px] md:pb-[50px] z-10">
         <div className="flex flex-col lg:flex-row items-start justify-between w-full gap-12">
           {/* LEFT */}
           <div className="inline-flex flex-col items-start gap-6 md:gap-10">
@@ -58,12 +58,11 @@ export default function Footer() {
 
           {/* RIGHT */}
           <div className="inline-flex flex-col sm:flex-row flex-wrap lg:flex-nowrap items-start gap-10 md:gap-[85px] lg:gap-[30px] xl:gap-[90px] 2xl:gap-[100px]">
-            {/* Company */}
+            {/* Company */} 
             <nav className="flex flex-col w-[140px] md:w-[150px] items-start gap-4 md:gap-5">
               <h3 className="font-normal text-white text-[16px] md:text-lg">
                 Company
               </h3>
-
               <ul className="inline-flex flex-col items-start gap-3 md:gap-5">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
@@ -123,7 +122,9 @@ export default function Footer() {
                 </div>
               ))}
             </div>
+            
           </div>
+
         </div>
 
         <hr className="w-full h-px bg-[#464646] border-0" />
@@ -132,6 +133,7 @@ export default function Footer() {
           Copyright © 2026. All Rights Reserved by LIS.
         </p>
       </div>
+      <div className="framer-a1jkq7" data-framer-name="Abstract" ></div>
     </footer>
   );
 }

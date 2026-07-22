@@ -4,10 +4,8 @@ import servicesgif from "../assets/services-gif.gif";
 import webdevgif from "../assets/webdev-gif.gif";
 import uxuigif from "../assets/uxui-gif.gif";
 import mobiledevgif from "../assets/mobiledev-gif.gif";
-import contactbtnarrow from "../assets/contactbtn-arrow.svg";
-import ctagif from "../assets/cta-gif.gif";
-import ctabggif from "../assets/ctabg-gif.gif";
 import Footer from "./Footer";
+import CTA from "./CTA";
 
 function Service() {
   return (
@@ -103,7 +101,7 @@ function Service() {
                 faster, and convert more effectively across all devices.
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 gap-y-4 md:gap-y-6 text-[18px] lg:text-[20px] xl:text-[28px] 2xl:text-[30px] font-semibold">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 gap-y-4 md:gap-y-6 text-[18px] lg:text-[20px] xl:text-[28px] 2xl:text-[30px] font-semibold midxl:!text-[20px] ">
                 <ul className="space-y-3 md:space-y-4">
                   <li>Next.Js / React.Js</li>
                   <li>Full-Stack Development</li>
@@ -154,7 +152,7 @@ function Service() {
               </p>
 
               {/* RIGHT : SERVICES */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 gap-y-4 md:gap-y-6 text-[18px] lg:text-[20px] xl:text-[28px] 2xl:text-[30px] font-semibold">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 gap-y-4 md:gap-y-6 text-[18px] lg:text-[20px] xl:text-[28px] 2xl:text-[30px] font-semibold midxl:!text-[20px] ">
                 <ul className="space-y-3 md:space-y-4">
                   <li>User Flows & Journeys</li>
                   <li>Wireframe & Prototyping</li>
@@ -169,6 +167,7 @@ function Service() {
                 </ul>
               </div>
             </div>
+
           </div>
         </section>
 
@@ -183,7 +182,7 @@ function Service() {
                 <div>
                   <img
                     src={mobiledevgif}
-                    alt="Mobile preview"
+                    alt="Mobile preview"  
                     className="rounded-xl shadow-md w-full h-auto object-cover"
                   />
                 </div>
@@ -207,7 +206,7 @@ function Service() {
               </p>
 
               {/* RIGHT : SERVICES */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 gap-y-4 md:gap-y-6 text-[18px] lg:text-[20px] xl:text-[28px] 2xl:text-[30px] font-semibold">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 gap-y-4 md:gap-y-6 text-[18px] lg:text-[20px] xl:text-[28px] 2xl:text-[30px] font-semibold midxl:!text-[20px] ">
                 <ul className="space-y-3 md:space-y-4">
                   <li>IOS & Android Apps</li>
                   <li>Flutter / React Native</li>
@@ -222,6 +221,7 @@ function Service() {
                 </ul>
               </div>
             </div>
+
           </div>
         </section>
 
@@ -260,7 +260,7 @@ function Service() {
               </p>
 
               {/* RIGHT : SERVICES */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 gap-y-4 md:gap-y-6 text-[18px] lg:text-[20px] xl:text-[28px] 2xl:text-[30px] font-semibold">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 md:gap-x-16 gap-y-4 md:gap-y-6 text-[18px] lg:text-[20px] xl:text-[28px] 2xl:text-[30px] font-semibold midxl:!text-[20px] ">
                 <ul className="space-y-3 md:space-y-4">
                   <li>IT Consulting</li>
                   <li>Digital Transformation</li>
@@ -278,39 +278,7 @@ function Service() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="mt-[40px] md:mt-[60px] mb-[80px] md:mb-[130px]">
-          <div className="containerX mx-auto">
-            <div className="flex flex-row items-center justify-between gap-8 p-[30px] md:p-[60px] lg:p-[75px] xl:p-[88px] 2xl:p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[30px] md:rounded-[40px] relative overflow-hidden">
-         ]
-
-              {/* TEXT */}
-              <p className="relative z-10 text-black text-[28px] md:text-[35px] xl:text-[52px] 2xl:text-[60px] font-bold xl:leading-[80px] 2xl:leading-[90px]">
-                Let’s turn your{" "}
-                <span className="text-white font-semibold italic">idea</span>{" "}
-                into a <br className="hidden sm:block" /> powerful digital
-                product.
-              </p>
-
-              {/* BUTTON */}
-              <button className="relative z-10 flex items-center gap-2.5 bg-[#ffffff21] border border-white shadow-[0px_4px_20px_#0000000d] px-[24px] md:px-[32px] lg:px-[40px] py-[14px] md:py-[18px] lg:py-[26px] rounded-full hover:bg-[#ffffff31] transition">
-                <span className="text-[#0b0c10] font-normal text-[14px] md:text-[16px] lg:text-[18px] whitespace-nowrap">
-                  Start a Conversation
-                </span>
-                <img src={contactbtnarrow} alt="" />
-              </button>
-
-              {/* GIF */}
-              <div className="absolute md:right-[9%] md:bottom-[-12%] lg:right-[8%] lg:bottom-[-14%] xl:right-[8%] xl:bottom-[-2%] 2xl:right-[7%] 2xl:bottom-[0%] hidden md:block z-10">
-                <img
-                  src={ctagif}
-                  alt=""
-                  className="w-[120px] md:w-[170px] lg:w-[209px]"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        <CTA/>
 
         <Footer />
       </div>

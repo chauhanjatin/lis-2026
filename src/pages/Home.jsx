@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroGif from "../assets/herosec-gif.gif";
 import ourfraturesgif from "../assets/ourfeatures-gif.gif";
@@ -11,11 +11,7 @@ import securearchitecture from "../assets/securearchitecture.svg";
 import endtoend from "../assets/endtoend.svg";
 import seamless from "../assets/seamless.svg";
 import relaiablesupport from "../assets/relaiablesupport.svg";
-import contactbtnarrow from "../assets/contactbtn-arrow.svg";
-import ctagif from "../assets/cta-gif.gif";
-import ctabggif from "../assets/ctabg-gif.gif";
-import discover from "../assets/discover.png";
-import build from "../assets/build.png";
+import CTA from "./CTA";
 import Navbar from "./Navbar";
 import psmarquee from "../assets/ps-marquee.svg";
 import figmamarquee from "../assets/figma-marquee.svg";
@@ -423,27 +419,66 @@ const toolsData = [
   ],
 ];
 
+const processSteps = [
+  {
+    number: "01",
+    title: "Discover",
+    description:
+      "We analyze your business challenges, goals, and audience to define the best technological approach.",
+    imageIndex: 0,
+  },
+  {
+    number: "02",
+    title: "Design",
+    description:
+      "Our UI/UX team creates modern, intuitive, and user-centric designs that elevate user experience across devices.",
+    imageIndex: 2,
+  },
+  {
+    number: "03",
+    title: "Build",
+    description:
+      "We develop secure, scalable, and future-ready digital products using clean code and industry best practices.",
+    imageIndex: 5,
+  },
+  {
+    number: "04",
+    title: "Deliver",
+    description:
+      "Your product is thoroughly tested and deployed with complete support for maintenance and future updates.",
+    imageIndex: 8,
+  },
+];
+
 export default function Home() {
   const { slug } = useParams();
   const project = data.find((item) => item.slug === slug) || data[0];
 
-  const sectionRef = useRef(null);
-  const [scale, setScale] = useState(1);
+  const processRef = useRef(null);
+  const [activeProcess, setActiveProcess] = useState(0);
 
   const sliderRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!sectionRef.current) return;
+      if (!processRef.current) return;
 
-      const rect = sectionRef.current.getBoundingClientRect();
+      const rect = processRef.current.getBoundingClientRect();
       const windowHeight = window.innerHeight;
 
       if (rect.top <= windowHeight && rect.bottom >= 0) {
-        const progress = 1 - rect.top / windowHeight;
-
-        const newScale = 1 + progress * 1;
-        setScale(Math.min(newScale, 2));
+        // Leave one extra viewport as an end buffer so the last slide
+        // becomes active well before the sticky card releases
+        const scrollableDistance = Math.max(rect.height - windowHeight * 2, 1);
+        const progress = Math.min(
+          Math.max(-rect.top / scrollableDistance, 0),
+          1,
+        );
+        // +1 slide for the "Our process" intro card
+        const totalSlides = processSteps.length + 1;
+        setActiveProcess(
+          Math.min(Math.floor(progress * totalSlides), totalSlides - 1),
+        );
       }
     };
 
@@ -488,7 +523,7 @@ export default function Home() {
                 <div className="relative">
                   {/* HEADING */}
 
-                  <h1 className="text-[34px] sm:text-[40px] md:text-[60px] lg:text-[60px] midxl:!text-[60px] font-semibold text-[#181818] leading-[42px] sm:leading-[52px] md:leading-[80px] lg:leading-[120px] midxl:!leading-[80px] mb-[30px]">
+                  <h1 className="text-[34px] sm:text-[40px] md:text-[60px] lg:text-[60px] midxl:!text-[52px] font-semibold text-[#181818] leading-[42px] sm:leading-[52px] md:leading-[80px] lg:leading-[120px] midxl:!leading-[80px] mb-[30px]">
                     <div className="border border-[#828282] rounded-full me-3 w-[177px] h-[94px] inline-flex overflow-hidden relative top-4">
                       <img
                         src={upworkgif}
@@ -524,7 +559,6 @@ export default function Home() {
                       Book a Free Consultation
                     </a>
                   </div>
-                  
                 </div>
               </div>
 
@@ -756,11 +790,17 @@ export default function Home() {
                   </p>
                 </div>
 
-                <img
-                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0"
-                  alt="Carose"
-                  src={cardarrow}
-                />
+                <Link
+                  to="/services"
+                  aria-label="View service details"
+                  className="group border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0 overflow-hidden transition-all duration-300 hover:bg-[#181818] hover:scale-110 hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)]"
+                >
+                  <img
+                    className="transition-all duration-300 group-hover:invert group-hover:-rotate-45"
+                    alt="Arrow"
+                    src={cardarrow}
+                  />
+                </Link>
               </div>
             </div>
 
@@ -779,11 +819,17 @@ export default function Home() {
                   </p>
                 </div>
 
-                <img
-                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0"
-                  alt="Carose"
-                  src={cardarrow}
-                />
+                <Link
+                  to="/services"
+                  aria-label="View service details"
+                  className="group border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0 overflow-hidden transition-all duration-300 hover:bg-[#181818] hover:scale-110 hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)]"
+                >
+                  <img
+                    className="transition-all duration-300 group-hover:invert group-hover:-rotate-45"
+                    alt="Arrow"
+                    src={cardarrow}
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -802,11 +848,17 @@ export default function Home() {
                     experiences.
                   </p>
                 </div>
-                <img
-                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0"
-                  alt="Carose"
-                  src={cardarrow}
-                />
+                <Link
+                  to="/services"
+                  aria-label="View service details"
+                  className="group border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0 overflow-hidden transition-all duration-300 hover:bg-[#181818] hover:scale-110 hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)]"
+                >
+                  <img
+                    className="transition-all duration-300 group-hover:invert group-hover:-rotate-45"
+                    alt="Arrow"
+                    src={cardarrow}
+                  />
+                </Link>
               </div>
             </div>
 
@@ -825,120 +877,109 @@ export default function Home() {
                   </p>
                 </div>
 
-                <img
-                  className="border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0"
-                  alt="Carose"
-                  src={cardarrow}
-                />
+                <Link
+                  to="/services"
+                  aria-label="View service details"
+                  className="group border border-black rounded-full py-[14px] px-[14px] md:py-[20px] md:px-[17px] midxl:!py-[14px] midxl:!px-[14px] shrink-0 overflow-hidden transition-all duration-300 hover:bg-[#181818] hover:scale-110 hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)]"
+                >
+                  <img
+                    className="transition-all duration-300 group-hover:invert group-hover:-rotate-45"
+                    alt="Arrow"
+                    src={cardarrow}
+                  />
+                </Link>
               </div>
             </div>
           </div>
         </div>
 
+        {/* <div className="mb-6 flex items-center justify-between text-white/70">
+          <p className="text-sm font-medium uppercase tracking-[0.2em]">
+            Our process
+          </p>
+          <p className="text-sm font-medium">0{activeProcess + 1} / 04</p>
+        </div> */}
+
         {/* Our process */}
-        <section ref={sectionRef} className="w-full h-[100vh] overflow-hidden">
-          <div className="sticky top-0 flex items-center justify-center h-screen">
-            <div className="flex justify-center">
-              <p
-                style={{ transform: `scale(${scale})` }}
-                className="w-[min(86vw,850px)] px-10 py-20 md:px-20 md:py-28 bg-[#181818] text-white text-[clamp(3.5rem,7vw,5.625rem)] font-bold leading-[1.1] text-center"
-              >
-                Our <br /> Process
-              </p>
+        <section
+          ref={processRef}
+          className="relative h-[500vh] pt-8">
+          <div className="sticky top-[20px] flex h-screen items-center py-8">
+            <div className="mx-auto w-full  overflow-hidden  border border-white/70 bg-[#111111] px-36 py-16 ">
+              <div className="relative min-h-[500px] lg:min-h-[600px]">
+                {/* Intro card */}
+                <article
+                  aria-hidden={activeProcess !== 0}
+                  className={`absolute inset-0 flex items-center justify-center transition-all duration-700 ease-out ${
+                    activeProcess === 0
+                      ? "scale-100 opacity-100"
+                      : "pointer-events-none scale-[1.6] opacity-0"
+                  }`}
+                >
+                  <h2 className="text-center text-[clamp(3.5rem,9vw,10rem)] font-semibold leading-[0.95] text-white">
+                    Our process
+                  </h2>
+                </article>
+
+                {processSteps.map((step, index) => {
+                  const slideIndex = index + 1;
+                  const isActive = slideIndex === activeProcess;
+                  const isPast = slideIndex < activeProcess;
+                  const image = project?.gallery?.[step.imageIndex];
+
+                  return (
+                    <article
+                      key={step.number}
+                      aria-hidden={!isActive}
+                      className={`absolute inset-0 grid grid-cols-1 gap-8 transition-all duration-700 ease-out lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:gap-14 ${
+                        isActive
+                          ? "scale-100 opacity-100"
+                          : isPast
+                            ? "pointer-events-none scale-110 opacity-0"
+                            : "pointer-events-none scale-90 opacity-0"
+                      }`}
+                    >
+                      <div className="max-w-[460px] text-white">
+                        <span className="inline-flex rounded-full border border-white/70 px-4 py-2 text-sm font-medium tracking-wide">
+                          [ {step.number} ]
+                        </span>
+                        <h2 className="mt-10 text-[clamp(3.5rem,7vw,6.75rem)] font-semibold leading-[0.95]">
+                          {step.title}
+                        </h2>
+                        <p className="mt-6 max-w-[420px] text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+                          {step.description}
+                        </p>
+                       
+                      </div>
+
+                      <div className="relative h-[240px] overflow-hidden rounded-[22px] bg-[#f0eef5] sm:h-[320px] lg:h-[500px]">
+                        {image && (
+                          <img
+                            src={image}
+                            alt={`${step.title} project preview`}
+                            className="h-full w-full object-cover object-center transition-transform duration-700"
+                          />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-white/10" />
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+
+              <div className="mt-6 flex gap-2" aria-label="Process progress">
+                {processSteps.map((step, index) => (
+                  <span
+                    key={step.number}
+                    className={`h-1 flex-1 rounded-full transition-colors duration-500 ${
+                      index < activeProcess ? "bg-white" : "bg-white/20"
+                    }`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </section>
-
-        {/* Service we provide */}
-        {/* <div className="bg-[#181818] text-white">
-          <div className="px-[40px]">
-            <div className="py-[100px] space-y-[120px]">
-              <div className="border-t border-white/10 pt-[80px] flex items-start justify-between">
-                <div className="flex items-start gap-[100px]">
-                  <span className="text-[40px]">[ 1 ]</span>
-                  <h2 className="text-[158px] font-semibold leading-none">
-                    Discover
-                  </h2>
-                </div>
-                <p className="max-w-[591px] text-[22px]">
-                  We analyze your business challenges, goals, and audience to
-                  define the best technological approach.
-                </p>
-                <div>
-                  <img src={discover} alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        <div className="Discover_section">
-          <div className="Discover_items text-white">
-            <div className="Discover_content">
-              <span className="text-[40px]">[ 1 ]</span>
-              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none midxl:text-[100px]">
-                Discover
-              </h2>
-              <p className="max-w-[591px] text-[22px]">
-                We analyze your business challenges, goals, and audience to
-                define the best technological approach.
-              </p>
-            </div>
-            <div className="Discover_img">
-              <img src={discover} alt="" />
-            </div>
-          </div>
-
-          <div className="leftDiscover_items text-white">
-            <div className="leftDiscover_img">
-              <img src={discover} alt="" />
-            </div>
-
-            <div className="Discover_content">
-              <span className="text-[40px]">[ 2 ]</span>
-              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none midxl:text-[100px]">
-                Design
-              </h2>
-              <p className="max-w-[591px] text-[22px]">
-                Our UI/UX team creates modern, intuitive, and user-centric
-                designs that elevate user experience across devices.
-              </p>
-            </div>
-          </div>
-
-          <div className="Discover_items text-white">
-            <div className="Discover_content">
-              <span className="text-[40px]">[ 3 ]</span>
-              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none midxl:text-[100px]">
-                Build
-              </h2>
-              <p className="max-w-[591px] text-[22px]">
-                We develop secure, scalable, and future-ready digital products
-                using clean code and industry best practices.
-              </p>
-            </div>
-            <div className="Discover_img">
-              <img src={discover} alt="" />
-            </div>
-          </div>
-
-          <div className="leftDiscover_items text-white">
-            <div className="leftDiscover_img">
-              <img src={discover} alt="" />
-            </div>
-
-            <div className="Discover_content">
-              <p className="max-w-[591px] text-[22px]">
-                Your product is thoroughly tested and deployed with complete
-                support for maintenance and future updates.
-              </p>
-              <h2 className="text-[clamp(4rem,11vw,9.875rem)] font-semibold leading-none midxl:text-[100px]">
-                Deliver
-              </h2>
-              <span className="text-[40px]">[ 4 ]</span>
-            </div>
-          </div>
-        </div>
 
         {/* Key features */}
         <section className="containerX mx-auto bg-white py-12 md:py-16 lg:py-20">
@@ -996,39 +1037,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="mt-[40px] md:mt-[60px] mb-[80px] md:mb-[120px] lg:mb-[140px]">
-          <div className="containerX mx-auto">
-            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 lg:gap-0 p-[30px] sm:p-[50px] md:p-[70px] lg:p-[100px] bg-[linear-gradient(226deg,rgba(37,74,140,1)_0%,rgba(29,176,190,1)_100%)] rounded-[25px] md:rounded-[30px] lg:rounded-[40px] relative overflow-hidden">
-              {/* <img
-                className="absolute inset-0 h-full w-full object-cover opacity-[5%]"
-                alt="Background pattern"
-                src={ctabggif}
-              /> */}
-
-              <p className="relative z-10 text-black text-[36px] sm:text-[48px] md:text-[64px] lg:text-[95px] leading-[120%] font-bold">
-                We work with <br />
-                brands in{" "}
-                <span className="text-white font-semibold italic">Tech.</span>
-              </p>
-
-              <button className="relative z-10 flex items-center gap-2.5 bg-[#ffffff21] border border-solid border-[#ffffff] shadow-[0px_4px_20px_#0000000d] px-[24px] py-[14px] sm:px-[30px] sm:py-[18px] md:px-[35px] md:py-[22px] lg:px-[40px] lg:py-[26px] rounded-[100px] hover:bg-[#ffffff31] transition">
-                <span className="text-[#0b0c10] font-normal text-[14px] sm:text-[16px] md:text-[18px] text-center leading-6 whitespace-nowrap">
-                  Contact Us
-                </span>
-                <img src={contactbtnarrow} alt="" />
-              </button>
-
-              <div className="absolute right-[3%] bottom-[10%] md:right-[2%] md:bottom-[12%] lg:right-[5%] lg:bottom-[10%] z-10">
-                <img
-                  src={ctagif}
-                  alt=""
-                  className="w-[120px] h-[120px] sm:w-[160px] sm:h-[160px] md:w-[190px] md:h-[190px] lg:w-[209px] lg:h-[209px]"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
+        <CTA />
 
         {/* Tools */}
         <section className="relative w-full bg-[#181818] py-12 md:py-16 lg:py-20 overflow-hidden  ">
