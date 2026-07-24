@@ -565,7 +565,7 @@ export default function Home() {
       <div className="w-full">
         <section
           id="home"
-          className="relative overflow-hidden pt-28 md:pt-32 pb-16 md:pb-24"
+          className="relative overflow-hidden midxl:!pt-[200px] md:pt-[250px] pb-16 md:pb-24"
           style={{
             backgroundColor: "#FAFAFA",
             backgroundImage: `

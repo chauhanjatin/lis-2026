@@ -278,7 +278,7 @@ export default function Navbar() {
         </nav>
       </header>
 
-      <div className="h-[90px] sm:h-[100px] md:h-[110px]" />
+      {/* <div className="h-[90px] sm:h-[100px] md:h-[110px]" /> */}
     </div>
   );
 }
